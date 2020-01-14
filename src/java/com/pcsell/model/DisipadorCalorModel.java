@@ -3,7 +3,7 @@
  */
 package com.pcsell.model;
 
-import com.pcsell.entity.MarcaProcesador;
+import com.pcsell.entity.DisipadorCalor;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
@@ -13,35 +13,20 @@ import org.hibernate.cfg.Configuration;
 
 /**
  *
- * @author labtw13
+ * @author 706
  */
-public class MarcaProcesadorModel implements IMarcaProcesadorModel{
+public class DisipadorCalorModel implements IDisipadorCalorModel{
     
     private SessionFactory sessionFactory;
     private Session session;
 
     @Override
-    public MarcaProcesador obtenerRegistro(Long id) {
-        MarcaProcesador mp = null;
+    public List<DisipadorCalor> obtenerRegistros() {
+        List<DisipadorCalor> lista = null;
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            mp = (MarcaProcesador) session.get(MarcaProcesador.class, id);
-            session.close();
-            sessionFactory.close();
-        } catch (HibernateException e) {
-            System.out.println(e.getMessage());
-        }
-        return mp;
-    }
-
-    @Override
-    public List<MarcaProcesador> obtenerRegistros() {
-        List<MarcaProcesador> lista = null;
-        try {
-            sessionFactory = new Configuration().configure().buildSessionFactory();
-            session = sessionFactory.openSession();
-            lista = (ArrayList<MarcaProcesador>) session.createQuery("FROM Marca_procesador").list();
+            lista = (ArrayList<DisipadorCalor>) session.createQuery("FROM Disipador_calor").list();
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
@@ -51,12 +36,27 @@ public class MarcaProcesadorModel implements IMarcaProcesadorModel{
     }
 
     @Override
-    public void crearRegistro(MarcaProcesador marcaprocesador) {
+    public DisipadorCalor obtenerRegistro(Long id) {
+        DisipadorCalor disipador= null;
+        try {
+            sessionFactory = new Configuration().configure().buildSessionFactory();
+            session = sessionFactory.openSession();
+            disipador = (DisipadorCalor) session.get(DisipadorCalor.class, id);
+            session.close();
+            sessionFactory.close();
+        } catch (HibernateException e) {
+            System.out.println(e.getMessage());
+        }
+        return disipador;
+    }
+
+    @Override
+    public void crearRegistro(DisipadorCalor disipador) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.save(marcaprocesador);
+            session.save(disipador);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -66,12 +66,12 @@ public class MarcaProcesadorModel implements IMarcaProcesadorModel{
     }
 
     @Override
-    public void actualizarRegistro(MarcaProcesador marcaprocesador) {
+    public void actualizarRegistro(DisipadorCalor disipador) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.update(marcaprocesador);
+            session.update(disipador);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -81,12 +81,12 @@ public class MarcaProcesadorModel implements IMarcaProcesadorModel{
     }
 
     @Override
-    public void eliminarRegistro(MarcaProcesador marcaprocesador) {
+    public void eliminarRegistro(DisipadorCalor disipador) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.delete(marcaprocesador);
+            session.delete(disipador);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();

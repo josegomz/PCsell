@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * implementacion de cruds para la clase Imagen
  */
 package com.pcsell.model;
 
@@ -40,7 +38,7 @@ public class ImagenModel implements IImagenModel{
     @Override
     public Imagen obtenerRegistro(Long id) {
         Imagen imagen= null;
-         try {
+        try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             imagen = (Imagen) session.get(Imagen.class, id);

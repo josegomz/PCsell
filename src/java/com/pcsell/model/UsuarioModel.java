@@ -3,7 +3,7 @@
  */
 package com.pcsell.model;
 
-import com.pcsell.entity.MarcaProcesador;
+import com.pcsell.entity.Usuario;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
@@ -13,35 +13,20 @@ import org.hibernate.cfg.Configuration;
 
 /**
  *
- * @author labtw13
+ * @author 706
  */
-public class MarcaProcesadorModel implements IMarcaProcesadorModel{
+public class UsuarioModel implements IUsuarioModel{
     
     private SessionFactory sessionFactory;
     private Session session;
 
     @Override
-    public MarcaProcesador obtenerRegistro(Long id) {
-        MarcaProcesador mp = null;
+    public List<Usuario> obtenerRegistros() {
+        List<Usuario> lista = null;
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            mp = (MarcaProcesador) session.get(MarcaProcesador.class, id);
-            session.close();
-            sessionFactory.close();
-        } catch (HibernateException e) {
-            System.out.println(e.getMessage());
-        }
-        return mp;
-    }
-
-    @Override
-    public List<MarcaProcesador> obtenerRegistros() {
-        List<MarcaProcesador> lista = null;
-        try {
-            sessionFactory = new Configuration().configure().buildSessionFactory();
-            session = sessionFactory.openSession();
-            lista = (ArrayList<MarcaProcesador>) session.createQuery("FROM Marca_procesador").list();
+            lista = (ArrayList<Usuario>) session.createQuery("FROM Usuario").list();
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
@@ -51,12 +36,27 @@ public class MarcaProcesadorModel implements IMarcaProcesadorModel{
     }
 
     @Override
-    public void crearRegistro(MarcaProcesador marcaprocesador) {
+    public Usuario obtenerRegistro(Long id) {
+        Usuario usuario= null;
+        try {
+            sessionFactory = new Configuration().configure().buildSessionFactory();
+            session = sessionFactory.openSession();
+            usuario = (Usuario) session.get(Usuario.class, id);
+            session.close();
+            sessionFactory.close();
+        } catch (HibernateException e) {
+            System.out.println(e.getMessage());
+        }
+        return usuario;
+    }
+
+    @Override
+    public void crearRegistro(Usuario usuario) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.save(marcaprocesador);
+            session.save(usuario);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -66,12 +66,12 @@ public class MarcaProcesadorModel implements IMarcaProcesadorModel{
     }
 
     @Override
-    public void actualizarRegistro(MarcaProcesador marcaprocesador) {
+    public void actualizarRegistro(Usuario usuario) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.update(marcaprocesador);
+            session.update(usuario);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -81,12 +81,12 @@ public class MarcaProcesadorModel implements IMarcaProcesadorModel{
     }
 
     @Override
-    public void eliminarRegistro(MarcaProcesador marcaprocesador) {
+    public void eliminarRegistro(Usuario usuario) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.delete(marcaprocesador);
+            session.delete(usuario);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();

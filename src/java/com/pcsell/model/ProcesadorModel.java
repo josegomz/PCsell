@@ -1,9 +1,11 @@
 /*
- * 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package com.pcsell.model;
 
-import com.pcsell.entity.MarcaProcesador;
+import com.pcsell.entity.Procesador;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
@@ -15,33 +17,18 @@ import org.hibernate.cfg.Configuration;
  *
  * @author labtw13
  */
-public class MarcaProcesadorModel implements IMarcaProcesadorModel{
+public class ProcesadorModel implements IProcesadorModel{
     
     private SessionFactory sessionFactory;
     private Session session;
 
     @Override
-    public MarcaProcesador obtenerRegistro(Long id) {
-        MarcaProcesador mp = null;
+    public List<Procesador> obtenerRegistros() {
+        List<Procesador> lista = null;
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            mp = (MarcaProcesador) session.get(MarcaProcesador.class, id);
-            session.close();
-            sessionFactory.close();
-        } catch (HibernateException e) {
-            System.out.println(e.getMessage());
-        }
-        return mp;
-    }
-
-    @Override
-    public List<MarcaProcesador> obtenerRegistros() {
-        List<MarcaProcesador> lista = null;
-        try {
-            sessionFactory = new Configuration().configure().buildSessionFactory();
-            session = sessionFactory.openSession();
-            lista = (ArrayList<MarcaProcesador>) session.createQuery("FROM Marca_procesador").list();
+            lista = (ArrayList<Procesador>) session.createQuery("FROM Procesador").list();
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
@@ -51,12 +38,27 @@ public class MarcaProcesadorModel implements IMarcaProcesadorModel{
     }
 
     @Override
-    public void crearRegistro(MarcaProcesador marcaprocesador) {
+    public Procesador obtenerRegistro(Long id) {
+        Procesador procesador = null;
+        try {
+            sessionFactory = new Configuration().configure().buildSessionFactory();
+            session = sessionFactory.openSession();
+            procesador = (Procesador) session.get(Procesador.class, id);
+            session.close();
+            sessionFactory.close();
+        } catch (HibernateException e) {
+            System.out.println(e.getMessage());
+        }
+        return procesador;
+    }
+
+    @Override
+    public void crearRegistro(Procesador procesador) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.save(marcaprocesador);
+            session.save(procesador);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -66,12 +68,12 @@ public class MarcaProcesadorModel implements IMarcaProcesadorModel{
     }
 
     @Override
-    public void actualizarRegistro(MarcaProcesador marcaprocesador) {
+    public void actualizarRegistro(Procesador procesador) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.update(marcaprocesador);
+            session.update(procesador);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -81,12 +83,12 @@ public class MarcaProcesadorModel implements IMarcaProcesadorModel{
     }
 
     @Override
-    public void eliminarRegistro(MarcaProcesador marcaprocesador) {
+    public void eliminarRegistro(Procesador procesador) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.delete(marcaprocesador);
+            session.delete(procesador);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();

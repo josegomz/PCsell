@@ -8,7 +8,7 @@ import com.pcsell.entity.Imagen;
 
 /**
  *
- * @author labtw13
+ * @author 706
  */
 public interface IImagenModel {
 
