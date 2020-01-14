@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/01/2020 01:47:31 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pcsell.entity.ProcesadorDisipador" table="procesador_disipador" schema="public" optimistic-lock="version">
+        <composite-id name="id" class="com.pcsell.entity.ProcesadorDisipadorId">
+            <key-property name="procesador" type="long">
+                <column name="procesador" />
+            </key-property>
+            <key-property name="disipador" type="long">
+                <column name="disipador" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="disipadorCalor" class="com.pcsell.entity.DisipadorCalor" update="false" insert="false" fetch="select">
+            <column name="disipador" not-null="true" />
+        </many-to-one>
+        <many-to-one name="marcaProcesador" class="com.pcsell.entity.MarcaProcesador" update="false" insert="false" fetch="select">
+            <column name="procesador" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
