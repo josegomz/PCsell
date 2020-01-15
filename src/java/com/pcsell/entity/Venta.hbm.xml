@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/01/2020 01:47:31 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pcsell.entity.Venta" table="venta" schema="public" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="computadora" class="com.pcsell.entity.Computadora" fetch="select">
+            <column name="computadora" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="com.pcsell.entity.Usuario" fetch="select">
+            <column name="usuario" not-null="true" />
+        </many-to-one>
+        <property name="fechaCompra" type="timestamp">
+            <column name="fecha_compra" length="29" not-null="true" />
+        </property>
+        <property name="cantidad" type="int">
+            <column name="cantidad" not-null="true" />
+        </property>
+        <property name="costo" type="big_decimal">
+            <column name="costo" precision="131089" scale="0" not-null="true" />
+        </property>
+        <property name="costoEnvio" type="big_decimal">
+            <column name="costo_envio" precision="131089" scale="0" />
+        </property>
+        <property name="costoTotal" type="big_decimal">
+            <column name="costo_total" precision="131089" scale="0" not-null="true" />
+        </property>
+        <property name="lugarEnvio" type="string">
+            <column name="lugar_envio" not-null="true" />
+        </property>
+        <property name="referencias" type="string">
+            <column name="referencias" />
+        </property>
+        <property name="codigoPostal" type="string">
+            <column name="codigo_postal" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

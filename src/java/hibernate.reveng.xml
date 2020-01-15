@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <!--
 DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
@@ -39,27 +39,21 @@ made subject to such option by the copyright holder.
 
 Contributor(s):
 -->
-<hibernate-configuration>
-  <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/pcsell</property>
-    <property name="hibernate.connection.username">postgres</property>
-    <property name="hibernate.connection.password">root</property>
-    <mapping resource="com/pcsell/entity/Gabinete.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/DiscoDuro.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/TarjetaMadre.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/MarcaProcesador.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/MemoriaRam.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/ProcesadorDisipador.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Usuario.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/DisipadorCalor.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Imagen.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Venta.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/FuentePoder.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/TamanioTm.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Procesador.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Computadora.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/TarjetaVideo.hbm.xml"/>
-  </session-factory>
-</hibernate-configuration>
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="pcsell" match-schema="public"/>
+  <table-filter match-name="tarjeta_madre"/>
+  <table-filter match-name="gabinete"/>
+  <table-filter match-name="computadora"/>
+  <table-filter match-name="memoria_ram"/>
+  <table-filter match-name="disco_duro"/>
+  <table-filter match-name="procesador"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="venta"/>
+  <table-filter match-name="marca_procesador"/>
+  <table-filter match-name="disipador_calor"/>
+  <table-filter match-name="fuente_poder"/>
+  <table-filter match-name="imagen"/>
+  <table-filter match-name="tarjeta_video"/>
+  <table-filter match-name="procesador_disipador"/>
+  <table-filter match-name="tamanio_tm"/>
+</hibernate-reverse-engineering>

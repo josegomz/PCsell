@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/01/2020 01:47:31 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pcsell.entity.FuentePoder" table="fuente_poder" schema="public" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="imagen" class="com.pcsell.entity.Imagen" fetch="select">
+            <column name="imagen" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tamanioTm" class="com.pcsell.entity.TamanioTm" fetch="select">
+            <column name="tamanio_tm" not-null="true" />
+        </many-to-one>
+        <property name="marca" type="string">
+            <column name="marca" not-null="true" />
+        </property>
+        <property name="modelo" type="string">
+            <column name="modelo" not-null="true" />
+        </property>
+        <property name="precio" type="big_decimal">
+            <column name="precio" precision="131089" scale="0" not-null="true" />
+        </property>
+        <property name="cantidad" type="java.lang.Integer">
+            <column name="cantidad" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" />
+        </property>
+        <set name="computadoras" table="computadora" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fuente_poder" not-null="true" />
+            </key>
+            <one-to-many class="com.pcsell.entity.Computadora" />
+        </set>
+    </class>
+</hibernate-mapping>

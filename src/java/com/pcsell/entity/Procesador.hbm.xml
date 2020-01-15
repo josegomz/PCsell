@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/01/2020 01:47:31 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pcsell.entity.Procesador" table="procesador" schema="public" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="imagen" class="com.pcsell.entity.Imagen" fetch="select">
+            <column name="imagen" not-null="true" />
+        </many-to-one>
+        <many-to-one name="marcaProcesador" class="com.pcsell.entity.MarcaProcesador" fetch="select">
+            <column name="marca" not-null="true" />
+        </many-to-one>
+        <property name="modelo" type="string">
+            <column name="modelo" not-null="true" />
+        </property>
+        <property name="nucleos" type="int">
+            <column name="nucleos" not-null="true" />
+        </property>
+        <property name="hilosDeProcesamiento" type="java.lang.Integer">
+            <column name="hilos_de_procesamiento" />
+        </property>
+        <property name="frecuenciaBase" type="big_decimal">
+            <column name="frecuencia_base" precision="131089" scale="0" />
+        </property>
+        <property name="tdp" type="big_decimal">
+            <column name="tdp" precision="131089" scale="0" />
+        </property>
+        <property name="precio" type="big_decimal">
+            <column name="precio" precision="131089" scale="0" not-null="true" />
+        </property>
+        <property name="cantidades" type="java.lang.Integer">
+            <column name="cantidades" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" />
+        </property>
+        <set name="computadoras" table="computadora" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="procesador" not-null="true" />
+            </key>
+            <one-to-many class="com.pcsell.entity.Computadora" />
+        </set>
+    </class>
+</hibernate-mapping>
