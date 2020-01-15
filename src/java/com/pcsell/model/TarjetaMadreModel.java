@@ -1,12 +1,9 @@
-
- /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/*
+ * 
  */
 package com.pcsell.model;
 
-import com.pcsell.entity.Procesador;
+import com.pcsell.entity.TarjetaMadre;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
@@ -16,20 +13,20 @@ import org.hibernate.cfg.Configuration;
 
 /**
  *
- * @author labtw13
+ * @author labdessw21
  */
-public class ProcesadorModel implements IProcesadorModel{
+public class TarjetaMadreModel implements ITarjetaMadreModel{
     
     private SessionFactory sessionFactory;
     private Session session;
 
     @Override
-    public List<Procesador> obtenerRegistros() {
-        List<Procesador> lista = null;
+    public List<TarjetaMadre> obtenerRegistros() {
+        List<TarjetaMadre> lista = null;
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            lista = (ArrayList<Procesador>) session.createQuery("FROM Procesador").list();
+            lista = (ArrayList<TarjetaMadre>) session.createQuery("FROM Tarjeta_madre").list();
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
@@ -39,27 +36,27 @@ public class ProcesadorModel implements IProcesadorModel{
     }
 
     @Override
-    public Procesador obtenerRegistro(Long id) {
-        Procesador procesador = null;
+    public TarjetaMadre obtenerRegistro(Long id) {
+        TarjetaMadre tarjeta = null;
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            procesador = (Procesador) session.get(Procesador.class, id);
+            tarjeta = (TarjetaMadre) session.get(TarjetaMadre.class, id);
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
             System.out.println(e.getMessage());
         }
-        return procesador;
+        return tarjeta;
     }
 
     @Override
-    public void crearRegistro(Procesador procesador) {
+    public void crearRegistr(TarjetaMadre tarjeta) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.save(procesador);
+            session.save(tarjeta);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -69,12 +66,12 @@ public class ProcesadorModel implements IProcesadorModel{
     }
 
     @Override
-    public void actualizarRegistro(Procesador procesador) {
+    public void actualizarRegistro(TarjetaMadre tarjeta) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.update(procesador);
+            session.update(tarjeta);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -84,12 +81,12 @@ public class ProcesadorModel implements IProcesadorModel{
     }
 
     @Override
-    public void eliminarRegistro(Procesador procesador) {
+    public void eliminarRegistro(TarjetaMadre tarjeta) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.delete(procesador);
+            session.delete(tarjeta);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();

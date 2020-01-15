@@ -1,5 +1,5 @@
 /*
- * 
+ * Interfaz de la entidad tarjeta madre
  */
 package com.pcsell.model;
 
@@ -8,9 +8,17 @@ import java.util.List;
 
 /**
  *
- * @author labtw13
+ * @author 706
  */
 public interface ITarjetaMadreModel {
+
     public List<TarjetaMadre> obtenerRegistros();
-    public TarjetaMadre obtenerRegistro();
+
+    public TarjetaMadre obtenerRegistro(Long id);
+
+    public void crearRegistr(TarjetaMadre tarjeta);
+
+    public void actualizarRegistro(TarjetaMadre tarjeta);
+
+    public void eliminarRegistro(TarjetaMadre tarjeta);
 }
