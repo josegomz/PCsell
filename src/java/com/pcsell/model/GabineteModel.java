@@ -3,6 +3,7 @@
  */
 package com.pcsell.model;
 
+import com.pcsell.entity.Gabinete;
 import com.pcsell.entity.MemoriaRam;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,18 +16,18 @@ import org.hibernate.cfg.Configuration;
  *
  * @author 706
  */
-public class MemoriaRamModel implements IMermoriaRamModel{
-
+public class GabineteModel implements IGabineteModel{
+    
     private SessionFactory sessionFactory;
     private Session session;
-    
+
     @Override
-    public List<MemoriaRam> obtenerRegistros() {
-        List<MemoriaRam> lista = null;
+    public List<Gabinete> obtenerRegistros() {
+        List<Gabinete> lista = null;
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            lista = (ArrayList<MemoriaRam>) session.createQuery("FROM Memoria_ram").list();
+            lista = (ArrayList<Gabinete>) session.createQuery("FROM Gabinete").list();
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
@@ -36,27 +37,27 @@ public class MemoriaRamModel implements IMermoriaRamModel{
     }
 
     @Override
-    public MemoriaRam obtenerRegistro(Long id) {
-        MemoriaRam memoria= null;
+    public Gabinete obtenerRegistro(Long id) {
+        Gabinete gabinete = null;
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            memoria = (MemoriaRam) session.get(MemoriaRam.class, id);
+            gabinete = (Gabinete) session.get(Gabinete.class, id);
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
             System.out.println(e.getMessage());
         }
-        return memoria;
+        return gabinete;
     }
 
     @Override
-    public void crearRegistro(MemoriaRam memoria) {
+    public void crearRegistro(Gabinete gabinete) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.save(memoria);
+            session.save(gabinete);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -66,12 +67,12 @@ public class MemoriaRamModel implements IMermoriaRamModel{
     }
 
     @Override
-    public void actualizarRegistro(MemoriaRam memoria) {
+    public void actualizarRegistro(Gabinete gabinete) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.update(memoria);
+            session.update(gabinete);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -81,12 +82,12 @@ public class MemoriaRamModel implements IMermoriaRamModel{
     }
 
     @Override
-    public void eliminarRegistro(MemoriaRam memoria) {
+    public void eliminarRegistro(Gabinete gabinete) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.delete(memoria);
+            session.delete(gabinete);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
