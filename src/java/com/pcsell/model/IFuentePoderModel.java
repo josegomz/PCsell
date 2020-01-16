@@ -1,14 +1,24 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
 package com.pcsell.model;
 
+import com.pcsell.entity.FuentePoder;
+import java.util.List;
+
 /**
  *
- * @author labdessw21
+ * @author 706
  */
 public interface IFuentePoderModel {
-    
+
+    public List<FuentePoder> obtenerRegistros();
+
+    public FuentePoder obtenerRegistro(Long id);
+
+    public void crearRegistro(FuentePoder fuente);
+
+    public void actualizarRegistro(FuentePoder fuente);
+
+    public void eliminarRegistro(FuentePoder fuente);
 }
