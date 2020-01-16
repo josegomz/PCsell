@@ -4,7 +4,6 @@
 package com.pcsell.model;
 
 import com.pcsell.entity.Gabinete;
-import com.pcsell.entity.MemoriaRam;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
@@ -16,8 +15,8 @@ import org.hibernate.cfg.Configuration;
  *
  * @author 706
  */
-public class GabineteModel implements IGabineteModel{
-    
+public class GabineteModel implements IGabineteModel {
+
     private SessionFactory sessionFactory;
     private Session session;
 
@@ -95,5 +94,5 @@ public class GabineteModel implements IGabineteModel{
             System.out.println(e.getMessage());
         }
     }
-    
+
 }
