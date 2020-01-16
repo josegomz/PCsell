@@ -168,7 +168,7 @@ create table procesador_disipador(
         id bigserial not null,
 	procesador bigserial not null,
 	disipador bigserial not null,
-	constraint pk_fuente primary key(id),
+	constraint pk_procesador_disipador primary key(id),
 	constraint fk_procesador foreign key(procesador) references marca_procesador(id) on delete cascade on update cascade,
 	constraint fk_disipador foreign key(disipador) references disipador_calor(id) on delete cascade on update cascade
 );
