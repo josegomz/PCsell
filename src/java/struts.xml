@@ -7,4 +7,13 @@
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
     </package>
+    <package name="pcsell" namespace="/"  extends="struts-default">
+        <action name="actionInsertUsuario" 
+                class="com.pcsell.controller.UsuarioController"
+                method="crearRegistro">
+            <result name="success">/pages/usuario/mostrarUsuarios.jsp</result>
+            <result name="error">/pages/usuario/errorUsuario.jsp</result>
+        </action>
+    </package>
+    
 </struts>
