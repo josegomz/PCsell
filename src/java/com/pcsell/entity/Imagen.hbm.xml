@@ -6,7 +6,7 @@
     <class name="com.pcsell.entity.Imagen" table="imagen" schema="public" optimistic-lock="version">
         <id name="id" type="long">
             <column name="id" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <property name="nombre" type="string">
             <column name="nombre" not-null="true" />

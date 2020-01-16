@@ -6,7 +6,7 @@
     <class name="com.pcsell.entity.TamanioTm" table="tamanio_tm" schema="public" optimistic-lock="version">
         <id name="id" type="long">
             <column name="id" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <property name="tamanio" type="string">
             <column name="tamanio" not-null="true" />
