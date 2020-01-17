@@ -43,4 +43,7 @@ public class UsuarioService implements IUsuarioService{
         iUsuarioModel.eliminarRegistro(usuario);
     }
     
+    public boolean obtenerUsuarioPorCorreoYcontrasenia(String username, String password) {
+        return iUsuarioModel.obtenerUsuarioPorCorreoYcontrasenia(username, password);
+    }
 }

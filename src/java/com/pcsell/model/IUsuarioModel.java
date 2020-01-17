@@ -21,4 +21,6 @@ public interface IUsuarioModel {
     public void actualizarRegistro(Usuario usuario);
 
     public void eliminarRegistro(Usuario usuario);
+
+    public boolean obtenerUsuarioPorCorreoYcontrasenia(String username, String password);
 }

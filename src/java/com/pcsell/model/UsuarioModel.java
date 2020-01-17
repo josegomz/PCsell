@@ -7,6 +7,7 @@ import com.pcsell.entity.Usuario;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -98,4 +99,25 @@ public class UsuarioModel implements IUsuarioModel{
         }
     }
     
+    public boolean obtenerUsuarioPorCorreoYcontrasenia(String username, String password) {
+        boolean c = false;
+        try {
+            sessionFactory = new Configuration().configure().buildSessionFactory();
+            session = sessionFactory.openSession();
+            String hql = "SELECT nombre FROM Usuario WHERE coreo_electronico =:userName AND contrasenia =:passWord";
+            Query query = session.createQuery(hql);
+            query.setParameter("userName", username);
+            query.setParameter("passWord", password);
+            List results = query.list();
+            session.close();
+            sessionFactory.close();
+            if (results.size() > 0) {
+                return true;
+            }
+            return false;
+        } catch (HibernateException e) {
+            System.out.println(e.getMessage());
+        }
+        return c;
+    }
 }

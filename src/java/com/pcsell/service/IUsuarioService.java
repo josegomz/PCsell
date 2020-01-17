@@ -23,4 +23,6 @@ public interface IUsuarioService {
 
     public void eliminarRegistro(Usuario usuario);
     
+     public boolean obtenerUsuarioPorCorreoYcontrasenia(String username, String password);
+    
 }

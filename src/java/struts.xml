@@ -7,7 +7,12 @@
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
     </package>
-    <package name="pcsell"  extends="struts-default">
+    <package name="pcsell" namespace="/"  extends="struts-default">
+        <action name="login" class="com.pcsell.controller.LoginActionController" method="validarUsuario">
+            <result name="SUCCESS">pages/computadora/armarPc.jsp</result>
+            <result name="ERROR">pages/login/index.jsp</result>
+        </action>
+        
         <action name="actionInsertUsuario" 
                 class="com.pcsell.controller.UsuarioController"
                 method="crearRegistro">
