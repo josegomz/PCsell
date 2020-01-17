@@ -5,9 +5,9 @@
  */
 package com.pcsell.service;
 
-import com.pcsell.entity.ProcesadorDisipador;
-import com.pcsell.model.IProcesadorDisipadorModel;
-import com.pcsell.model.ProcesadorDisipadorModel;
+import com.pcsell.entity.Procesadordisipador;
+import com.pcsell.model.IProcesadordisipadorModel;
+import com.pcsell.model.ProcesadordisipadorModel;
 import java.util.List;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
@@ -16,34 +16,34 @@ import javax.faces.bean.ManagedBean;
  *
  * @author labtw13
  */
-@ManagedBean(name="procesadorDisipadorService")
+@ManagedBean(name="procesadordisipadorService")
 @ApplicationScoped
-public class ProcesadorDisipadorService implements IProcesadorDisipadorService{
+public class ProcesadordisipadorService implements IProcesadordisipadorService{
 
-    private final IProcesadorDisipadorModel iProcesadorDisipadorModel = new ProcesadorDisipadorModel();
+    private final IProcesadordisipadorModel iProcesadorDisipadorModel = new ProcesadordisipadorModel();
     
     @Override
-    public List<ProcesadorDisipador> obtenerRegistros() {
+    public List<Procesadordisipador> obtenerRegistros() {
         return iProcesadorDisipadorModel.obtenerRegistros();
     }
 
     @Override
-    public ProcesadorDisipador obtenerRegistro(Long id) {
+    public Procesadordisipador obtenerRegistro(Long id) {
         return iProcesadorDisipadorModel.obtenerRegistro(id);
     }
 
     @Override
-    public void crearRegistro(ProcesadorDisipador procesadorDisipador) {
+    public void crearRegistro(Procesadordisipador procesadorDisipador) {
         iProcesadorDisipadorModel.crearRegistro(procesadorDisipador);
     }
 
     @Override
-    public void actualizarRegistro(ProcesadorDisipador procesadorDisipador) {
+    public void actualizarRegistro(Procesadordisipador procesadorDisipador) {
         iProcesadorDisipadorModel.actualizarRegistro(procesadorDisipador);
     }
 
     @Override
-    public void eliminarRegistro(ProcesadorDisipador procesadorDisipador) {
+    public void eliminarRegistro(Procesadordisipador procesadorDisipador) {
         iProcesadorDisipadorModel.eliminarRegistro(procesadorDisipador);
     }
     

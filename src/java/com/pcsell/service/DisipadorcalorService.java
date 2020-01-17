@@ -16,7 +16,7 @@ import javax.faces.bean.ManagedBean;
  *
  * @author labtw13
  */
-@ManagedBean(name="disipadorCalorService")
+@ManagedBean(name="disipadorcalorService")
 @ApplicationScoped
 public class DisipadorcalorService implements IDisipadorcalorService{
     

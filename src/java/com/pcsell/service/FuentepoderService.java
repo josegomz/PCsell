@@ -16,7 +16,7 @@ import javax.faces.bean.ManagedBean;
  *
  * @author labtw13
  */
-@ManagedBean(name="fuentePoderService")
+@ManagedBean(name="fuentepoderService")
 @ApplicationScoped
 public class FuentepoderService implements IFuentepoderService{
     

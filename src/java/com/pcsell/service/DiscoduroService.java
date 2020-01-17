@@ -16,7 +16,7 @@ import javax.faces.bean.ManagedBean;
  *
  * @author labtw13
  */
-@ManagedBean(name="discoDuroService")
+@ManagedBean(name="discoduroService")
 @ApplicationScoped
 public class DiscoduroService implements IDiscoduroService{
     

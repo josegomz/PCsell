@@ -5,9 +5,9 @@
  */
 package com.pcsell.service;
 
-import com.pcsell.entity.MarcaProcesador;
-import com.pcsell.model.IMarcaProcesadorModel;
-import com.pcsell.model.MarcaProcesadorModel;
+import com.pcsell.entity.Marcaprocesador;
+import com.pcsell.model.IMarcaprocesadorModel;
+import com.pcsell.model.MarcaprocesadorModel;
 import java.util.List;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
@@ -16,34 +16,34 @@ import javax.faces.bean.ManagedBean;
  *
  * @author labtw13
  */
-@ManagedBean(name="marcaProcesadorService")
+@ManagedBean(name="marcaprocesadorService")
 @ApplicationScoped
-public class MarcaProcesadorService implements IMarcaProcesadorService{
+public class MarcaprocesadorService implements IMarcaprocesadorService{
 
-    private final IMarcaProcesadorModel iMarcaProcesadorModel = new MarcaProcesadorModel();
+    private final IMarcaprocesadorModel iMarcaProcesadorModel = new MarcaprocesadorModel();
     
     @Override
-    public MarcaProcesador obtenerRegistro(Long id) {
+    public Marcaprocesador obtenerRegistro(Long id) {
         return iMarcaProcesadorModel.obtenerRegistro(id);
     }
 
     @Override
-    public List<MarcaProcesador> obtenerRegistros() {
+    public List<Marcaprocesador> obtenerRegistros() {
         return iMarcaProcesadorModel.obtenerRegistros();
     }
 
     @Override
-    public void crearRegistro(MarcaProcesador marcaprocesador) {
+    public void crearRegistro(Marcaprocesador marcaprocesador) {
         iMarcaProcesadorModel.crearRegistro(marcaprocesador);
     }
 
     @Override
-    public void actualizarRegistro(MarcaProcesador marcaprocesador) {
+    public void actualizarRegistro(Marcaprocesador marcaprocesador) {
         iMarcaProcesadorModel.actualizarRegistro(marcaprocesador);
     }
 
     @Override
-    public void eliminarRegistro(MarcaProcesador marcaprocesador) {
+    public void eliminarRegistro(Marcaprocesador marcaprocesador) {
         iMarcaProcesadorModel.eliminarRegistro(marcaprocesador);
     }
     

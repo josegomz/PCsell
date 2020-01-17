@@ -5,9 +5,9 @@
  */
 package com.pcsell.service;
 
-import com.pcsell.entity.MemoriaRam;
-import com.pcsell.model.IMemoriaRamModel;
-import com.pcsell.model.MemoriaRamModel;
+import com.pcsell.entity.Memoriaram;
+import com.pcsell.model.IMemoriaramModel;
+import com.pcsell.model.MemoriaramModel;
 import java.util.List;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
@@ -16,34 +16,34 @@ import javax.faces.bean.ManagedBean;
  *
  * @author labtw13
  */
-@ManagedBean(name="memoriaRamService")
+@ManagedBean(name="memoriaramService")
 @ApplicationScoped
-public class MemoriaRamService implements IMemoriaRamService{
+public class MemoriaramService implements IMemoriaramService{
     
-    private final IMemoriaRamModel iMemoriaRamModel = new MemoriaRamModel();
+    private final IMemoriaramModel iMemoriaRamModel = new MemoriaramModel();
 
     @Override
-    public List<MemoriaRam> obtenerRegistros() {
+    public List<Memoriaram> obtenerRegistros() {
         return iMemoriaRamModel.obtenerRegistros();
     }
 
     @Override
-    public MemoriaRam obtenerRegistro(Long id) {
+    public Memoriaram obtenerRegistro(Long id) {
         return iMemoriaRamModel.obtenerRegistro(id);
     }
 
     @Override
-    public void crearRegistro(MemoriaRam memoria) {
+    public void crearRegistro(Memoriaram memoria) {
         iMemoriaRamModel.crearRegistro(memoria);
     }
 
     @Override
-    public void actualizarRegistro(MemoriaRam memoria) {
+    public void actualizarRegistro(Memoriaram memoria) {
         iMemoriaRamModel.actualizarRegistro(memoria);
     }
 
     @Override
-    public void eliminarRegistro(MemoriaRam memoria) {
+    public void eliminarRegistro(Memoriaram memoria) {
         iMemoriaRamModel.eliminarRegistro(memoria);
     }
     
