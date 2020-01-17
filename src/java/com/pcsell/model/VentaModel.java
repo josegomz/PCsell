@@ -1,29 +1,35 @@
 /*
- * 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package com.pcsell.model;
 
-import com.pcsell.entity.ProcesadorDisipador;
+import com.pcsell.entity.Procesador;
+import com.pcsell.entity.Venta;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
 /**
  *
- * @author 706
+ * @author labtw13
  */
-public class ProcesadorDisipadorModel implements IProcesadorDisipadorModel{
-
+public class VentaModel implements IVentaModel{
+    
     private SessionFactory sessionFactory;
     private Session session;
-    
+
     @Override
-    public List<ProcesadorDisipador> obtenerRegistros() {
-        List<ProcesadorDisipador> lista = null;
+    public List<Venta> obtenerRegistros() {
+        List<Venta> lista = null;
         try {
-            lista = (ArrayList<ProcesadorDisipador>) session.createQuery("FROM Procesador_disipador").list();
+            sessionFactory = new Configuration().configure().buildSessionFactory();
+            session = sessionFactory.openSession();
+            lista = (ArrayList<Venta>) session.createQuery("FROM Venta").list();
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
@@ -33,27 +39,27 @@ public class ProcesadorDisipadorModel implements IProcesadorDisipadorModel{
     }
 
     @Override
-    public ProcesadorDisipador obtenerRegistro(Long id) {
-        ProcesadorDisipador procesadorDisipador = null;
+    public Venta obtenerRegistro(Long id) {
+        Venta venta = null;
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            procesadorDisipador = (ProcesadorDisipador) session.get(ProcesadorDisipador.class, id);
+            venta = (Venta) session.get(Venta.class, id);
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
             System.out.println(e.getMessage());
         }
-        return procesadorDisipador;
+        return venta;
     }
 
     @Override
-    public void crearRegistro(ProcesadorDisipador procesadorDisipador) {
+    public void crearRegistro(Venta venta) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.save(procesadorDisipador);
+            session.save(venta);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -63,12 +69,12 @@ public class ProcesadorDisipadorModel implements IProcesadorDisipadorModel{
     }
 
     @Override
-    public void actualizarRegistro(ProcesadorDisipador procesadorDisipador) {
+    public void actualizarRegistro(Venta venta) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.update(procesadorDisipador);
+            session.update(venta);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -78,12 +84,12 @@ public class ProcesadorDisipadorModel implements IProcesadorDisipadorModel{
     }
 
     @Override
-    public void eliminarRegistro(ProcesadorDisipador procesadorDisipador) {
+    public void eliminarRegistro(Venta venta) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.delete(procesadorDisipador);
+            session.delete(venta);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
