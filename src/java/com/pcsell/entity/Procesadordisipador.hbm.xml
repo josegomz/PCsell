@@ -6,7 +6,7 @@
     <class name="com.pcsell.entity.Procesadordisipador" table="procesadordisipador" schema="public" optimistic-lock="version">
         <id name="id" type="long">
             <column name="id" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <many-to-one name="disipadorcalor" class="com.pcsell.entity.Disipadorcalor" fetch="select">
             <column name="disipador" not-null="true" />

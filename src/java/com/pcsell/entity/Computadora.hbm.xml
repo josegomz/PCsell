@@ -6,7 +6,7 @@
     <class name="com.pcsell.entity.Computadora" table="computadora" schema="public" optimistic-lock="version">
         <id name="id" type="long">
             <column name="id" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <many-to-one name="discoduroByDiscoduro" class="com.pcsell.entity.Discoduro" fetch="select">
             <column name="discoduro" not-null="true" />
