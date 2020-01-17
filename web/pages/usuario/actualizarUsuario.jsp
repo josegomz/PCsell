@@ -32,8 +32,8 @@
                             </s:a>
                         </li>
                         <li class="nav-item">
-                            <s:a href="dsj">
-                                <span class="nav-link">Mis compras</span>
+                            <s:a href="actionMostrarUsuarios">
+                                <span class="nav-link">Usuarios</span>
                             </s:a>
                         </li>
                         <li class="nav-item dropdown">
