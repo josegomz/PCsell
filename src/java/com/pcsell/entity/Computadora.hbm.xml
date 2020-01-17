@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pcsell.entity.Computadora" table="computadora" schema="public" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="discoduroByIddiscoduro" class="com.pcsell.entity.Discoduro" fetch="select">
+            <column name="iddiscoduro" not-null="true" />
+        </many-to-one>
+        <many-to-one name="discoduroByIddiscoduroadicional" class="com.pcsell.entity.Discoduro" fetch="select">
+            <column name="iddiscoduroadicional" not-null="true" />
+        </many-to-one>
+        <many-to-one name="disipadorcalor" class="com.pcsell.entity.Disipadorcalor" fetch="select">
+            <column name="iddisipador" not-null="true" />
+        </many-to-one>
+        <many-to-one name="fuentepoder" class="com.pcsell.entity.Fuentepoder" fetch="select">
+            <column name="idfuentepoder" not-null="true" />
+        </many-to-one>
+        <many-to-one name="gabinete" class="com.pcsell.entity.Gabinete" fetch="select">
+            <column name="idgabinete" not-null="true" />
+        </many-to-one>
+        <many-to-one name="memoriaramByIdmemoriaramadicional" class="com.pcsell.entity.Memoriaram" fetch="select">
+            <column name="idmemoriaramadicional" not-null="true" />
+        </many-to-one>
+        <many-to-one name="memoriaramByIdmemoriaram" class="com.pcsell.entity.Memoriaram" fetch="select">
+            <column name="idmemoriaram" not-null="true" />
+        </many-to-one>
+        <many-to-one name="procesador" class="com.pcsell.entity.Procesador" fetch="select">
+            <column name="idprocesador" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tarjetamadre" class="com.pcsell.entity.Tarjetamadre" fetch="select">
+            <column name="idtarjetamadre" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tarjetavideo" class="com.pcsell.entity.Tarjetavideo" fetch="select">
+            <column name="idtarjetavideo" not-null="true" />
+        </many-to-one>
+        <property name="costototal" type="big_decimal">
+            <column name="costototal" precision="131089" scale="0" not-null="true" />
+        </property>
+        <set name="ventas" table="venta" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcomputadora" not-null="true" />
+            </key>
+            <one-to-many class="com.pcsell.entity.Venta" />
+        </set>
+    </class>
+</hibernate-mapping>
