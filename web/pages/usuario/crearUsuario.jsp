@@ -5,9 +5,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PCSELL</title>
-        <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
-        <script  type="Text/javascript" src="../resources/js/jquery-3.3.1.min.js"></script>
-        <script  type="Text/javascript" src="../resources/js/bootstrap.min.js"></script>
+        <link href="../../resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!--        <link rel="stylesheet" href="resources/css/bootstrap.min.css">-->
+        <script src="../../resources/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="../../resources/js/bootstrap.min.js" type="text/javascript"></script>
+        <!--        <script  type="Text/javascript" src="resources/js/jquery-3.3.1.min.js"></script>-->
+        <!--        <script  type="Text/javascript" src="resources/js/bootstrap.min.js"></script>-->
     </head>
     <body>
         <div class="page-header">
@@ -62,17 +65,17 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <s:textfield name="usuario.coreoElectronico" type="email" id="inputEmail4" cssClass="form-control" placeholder="Email"></s:textfield>
+                        </div>
+                        <div class="form-group col-md-6">
+                        <s:textfield name="usuario.contrasenia" type="password" size="100px" id="inputPassword4" cssClass="form-control" placeholder="Password"></s:textfield>
+                        </div>
                     </div>
-                    <div class="form-group col-md-6">
-                    <s:textfield name="usuario.contrasenia" type="password" size="100px" id="inputPassword4" cssClass="form-control" placeholder="Password"></s:textfield>
+                    <div class="form-group">
+                    <s:textfield name="usuario.nombre" id="inputName" size="100px" placeholder="Ingrese su Nombre(s)" cssClass="form-control"></s:textfield>
                     </div>
-                </div>
-                <div class="form-group">
-                <s:textfield name="usuario.nombre" id="inputName" size="100px" placeholder="Ingrese su Nombre(s)" cssClass="form-control"></s:textfield>
-                </div>
-                <div class="form-group">
-                <s:textfield name="usuario.apellidos" type="text" id="inputApellido" placeholder="Ingrese su Apellido(s)" cssClass="form-control"></s:textfield>
-                </div>
+                    <div class="form-group">
+                    <s:textfield name="usuario.apellidos" type="text" id="inputApellido" placeholder="Ingrese su Apellido(s)" cssClass="form-control"></s:textfield>
+                    </div>
                 <s:submit value="Registrar" cssClass="btn btn-primary btn-block"></s:submit>
             </s:form>
         </div>
