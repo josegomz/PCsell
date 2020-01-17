@@ -25,11 +25,14 @@ public class ProcesadorController extends ActionSupport{
         return SUCCESS;
     }
     
-    public String obtenerRegistro(){
+    public String obtenerRegistros(){
         iProcesadorSevice = new ProcesadorService();
         try {
-            
+            this.listaRegistros=iProcesadorSevice.obtenerRegistros();
+            return SUCCESS;
         } catch (Exception e) {
+            System.out.println("Error \n"+e.getMessage());
+            return ERROR;
         }
     }
 }
