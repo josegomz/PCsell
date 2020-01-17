@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 16/01/2020 11:03:11 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.pcsell.entity.Memoriaram" table="memoriaram" schema="public" optimistic-lock="version">
         <id name="id" type="long">
             <column name="id" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <many-to-one name="imagen" class="com.pcsell.entity.Imagen" fetch="select">
-            <column name="imagen" not-null="true" />
+            <column name="idimagen" not-null="true" />
         </many-to-one>
         <property name="marca" type="string">
             <column name="marca" not-null="true" />
@@ -35,15 +35,15 @@
         <property name="descripcion" type="string">
             <column name="descripcion" />
         </property>
-        <set name="computadorasForMemoriaramadicional" table="computadora" inverse="true" lazy="true" fetch="select">
+        <set name="computadorasForIdmemoriaramadicional" table="computadora" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="memoriaramadicional" not-null="true" />
+                <column name="idmemoriaramadicional" not-null="true" />
             </key>
             <one-to-many class="com.pcsell.entity.Computadora" />
         </set>
-        <set name="computadorasForMemoriaram" table="computadora" inverse="true" lazy="true" fetch="select">
+        <set name="computadorasForIdmemoriaram" table="computadora" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="memoriaram" not-null="true" />
+                <column name="idmemoriaram" not-null="true" />
             </key>
             <one-to-many class="com.pcsell.entity.Computadora" />
         </set>

@@ -137,11 +137,10 @@ create table tarjetavideo(
 
 create table gabinete(
 	id bigserial not null,
+	idimagen bigserial not null,
+	idtamaniotm bigserial not null,
 	marca text not null,
 	modelo text not null,
-	idimagen bigserial not null,
-	tamaño text not null,
-	idtamaniotm bigserial not null,
 	descripcion text,
 	precio decimal not null,
 	cantidad integer,
@@ -152,10 +151,10 @@ create table gabinete(
 
 create table fuentepoder(
 	id bigserial not null,
-	marca text not null,
-	modelo text not null,
 	idimagen bigserial not null,
 	idtamaniotm bigserial not null,
+	marca text not null,
+	modelo text not null,
 	precio decimal not null,
 	cantidad integer,
 	descripcion text,
@@ -187,22 +186,22 @@ create table computadora(
 	idfuentepoder bigserial not null,
 	costototal decimal not null,
 	constraint pk_computadora primary key(id),
-	constraint fk_computador_procesador foreign key(procesador) references procesador(id) on delete cascade on update cascade,
-	constraint fk_computador_disipador foreign key(disipador) references disipadorcalor(id) on delete cascade on update cascade,
-	constraint fk_computador_tm foreign key(tarjetamadre) references tarjetamadre(id) on delete cascade on update cascade,
-	constraint fk_computador_ram foreign key(memoriaram) references memoriaram(id) on delete cascade on update cascade,
-	constraint fk_computador_ram2 foreign key(memoriaramadicional) references memoriaram(id) on delete cascade on update cascade,
-	constraint fk_computador_dd foreign key(discoduro) references discoduro(id) on delete cascade on update cascade,
-	constraint fk_computador_dd2 foreign key(discoduroadicional) references discoduro(id) on delete cascade on update cascade,
-	constraint fk_computador_tv foreign key(tarjetavideo) references tarjetavideo(id) on delete cascade on update cascade,
-	constraint fk_computador_gabinete foreign key(gabinete) references gabinete(id) on delete cascade on update cascade,
-	constraint fk_computador_fp foreign key(fuentepoder) references fuentepoder(id) on delete cascade on update cascade
+	constraint fk_computador_procesador foreign key(idprocesador) references procesador(id) on delete cascade on update cascade,
+	constraint fk_computador_disipador foreign key(iddisipador) references disipadorcalor(id) on delete cascade on update cascade,
+	constraint fk_computador_tm foreign key(idtarjetamadre) references tarjetamadre(id) on delete cascade on update cascade,
+	constraint fk_computador_ram foreign key(idmemoriaram) references memoriaram(id) on delete cascade on update cascade,
+	constraint fk_computador_ram2 foreign key(idmemoriaramadicional) references memoriaram(id) on delete cascade on update cascade,
+	constraint fk_computador_dd foreign key(iddiscoduro) references discoduro(id) on delete cascade on update cascade,
+	constraint fk_computador_dd2 foreign key(iddiscoduroadicional) references discoduro(id) on delete cascade on update cascade,
+	constraint fk_computador_tv foreign key(idtarjetavideo) references tarjetavideo(id) on delete cascade on update cascade,
+	constraint fk_computador_gabinete foreign key(idgabinete) references gabinete(id) on delete cascade on update cascade,
+	constraint fk_computador_fp foreign key(idfuentepoder) references fuentepoder(id) on delete cascade on update cascade
 );
 
 create table venta(
 	id bigserial not null,
-	usuario bigserial not null,
-	computadora bigserial not null,
+	idusuario bigserial not null,
+	idcomputadora bigserial not null,
 	fechacompra timestamp not null,
 	cantidad integer not null,
 	costo decimal not null,
@@ -213,6 +212,6 @@ create table venta(
 	codigopostal text not null,
 	telefono text not null,
 	constraint pk_venta primary key(id),
-	constraint fk_venta_usuario foreign key(usuario) references usuario(id) on delete cascade on update cascade,
-	constraint fk_venta_computadora foreign key(computadora) references computadora(id) on delete cascade on update cascade
+	constraint fk_venta_usuario foreign key(idusuario) references usuario(id) on delete cascade on update cascade,
+	constraint fk_venta_computadora foreign key(idcomputadora) references computadora(id) on delete cascade on update cascade
 );

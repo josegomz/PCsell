@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 16/01/2020 11:03:10 PM by Hibernate Tools 4.3.1
+// Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -23,8 +23,8 @@ public class Discoduro  implements java.io.Serializable {
      private String tipo;
      private BigDecimal precio;
      private String descripcion;
-     private Set computadorasForDiscoduro = new HashSet(0);
-     private Set computadorasForDiscoduroadicional = new HashSet(0);
+     private Set computadorasForIddiscoduro = new HashSet(0);
+     private Set computadorasForIddiscoduroadicional = new HashSet(0);
 
     public Discoduro() {
     }
@@ -41,7 +41,7 @@ public class Discoduro  implements java.io.Serializable {
         this.capacidad = capacidad;
         this.precio = precio;
     }
-    public Discoduro(long id, Imagen imagen, String marca, String modelo, String factordeforma, int rpm, String interfaz, int capacidad, String tipo, BigDecimal precio, String descripcion, Set computadorasForDiscoduro, Set computadorasForDiscoduroadicional) {
+    public Discoduro(long id, Imagen imagen, String marca, String modelo, String factordeforma, int rpm, String interfaz, int capacidad, String tipo, BigDecimal precio, String descripcion, Set computadorasForIddiscoduro, Set computadorasForIddiscoduroadicional) {
        this.id = id;
        this.imagen = imagen;
        this.marca = marca;
@@ -53,8 +53,8 @@ public class Discoduro  implements java.io.Serializable {
        this.tipo = tipo;
        this.precio = precio;
        this.descripcion = descripcion;
-       this.computadorasForDiscoduro = computadorasForDiscoduro;
-       this.computadorasForDiscoduroadicional = computadorasForDiscoduroadicional;
+       this.computadorasForIddiscoduro = computadorasForIddiscoduro;
+       this.computadorasForIddiscoduroadicional = computadorasForIddiscoduroadicional;
     }
    
     public long getId() {
@@ -134,19 +134,19 @@ public class Discoduro  implements java.io.Serializable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    public Set getComputadorasForDiscoduro() {
-        return this.computadorasForDiscoduro;
+    public Set getComputadorasForIddiscoduro() {
+        return this.computadorasForIddiscoduro;
     }
     
-    public void setComputadorasForDiscoduro(Set computadorasForDiscoduro) {
-        this.computadorasForDiscoduro = computadorasForDiscoduro;
+    public void setComputadorasForIddiscoduro(Set computadorasForIddiscoduro) {
+        this.computadorasForIddiscoduro = computadorasForIddiscoduro;
     }
-    public Set getComputadorasForDiscoduroadicional() {
-        return this.computadorasForDiscoduroadicional;
+    public Set getComputadorasForIddiscoduroadicional() {
+        return this.computadorasForIddiscoduroadicional;
     }
     
-    public void setComputadorasForDiscoduroadicional(Set computadorasForDiscoduroadicional) {
-        this.computadorasForDiscoduroadicional = computadorasForDiscoduroadicional;
+    public void setComputadorasForIddiscoduroadicional(Set computadorasForIddiscoduroadicional) {
+        this.computadorasForIddiscoduroadicional = computadorasForIddiscoduroadicional;
     }
 
 

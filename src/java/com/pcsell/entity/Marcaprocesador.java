@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 16/01/2020 11:03:10 PM by Hibernate Tools 4.3.1
+// Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;

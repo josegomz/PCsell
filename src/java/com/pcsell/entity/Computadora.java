@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 16/01/2020 11:03:10 PM by Hibernate Tools 4.3.1
+// Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -13,13 +13,13 @@ public class Computadora  implements java.io.Serializable {
 
 
      private long id;
-     private Discoduro discoduroByDiscoduro;
-     private Discoduro discoduroByDiscoduroadicional;
+     private Discoduro discoduroByIddiscoduro;
+     private Discoduro discoduroByIddiscoduroadicional;
      private Disipadorcalor disipadorcalor;
      private Fuentepoder fuentepoder;
      private Gabinete gabinete;
-     private Memoriaram memoriaramByMemoriaramadicional;
-     private Memoriaram memoriaramByMemoriaram;
+     private Memoriaram memoriaramByIdmemoriaramadicional;
+     private Memoriaram memoriaramByIdmemoriaram;
      private Procesador procesador;
      private Tarjetamadre tarjetamadre;
      private Tarjetavideo tarjetavideo;
@@ -30,29 +30,29 @@ public class Computadora  implements java.io.Serializable {
     }
 
 	
-    public Computadora(long id, Discoduro discoduroByDiscoduro, Discoduro discoduroByDiscoduroadicional, Disipadorcalor disipadorcalor, Fuentepoder fuentepoder, Gabinete gabinete, Memoriaram memoriaramByMemoriaramadicional, Memoriaram memoriaramByMemoriaram, Procesador procesador, Tarjetamadre tarjetamadre, Tarjetavideo tarjetavideo, BigDecimal costototal) {
+    public Computadora(long id, Discoduro discoduroByIddiscoduro, Discoduro discoduroByIddiscoduroadicional, Disipadorcalor disipadorcalor, Fuentepoder fuentepoder, Gabinete gabinete, Memoriaram memoriaramByIdmemoriaramadicional, Memoriaram memoriaramByIdmemoriaram, Procesador procesador, Tarjetamadre tarjetamadre, Tarjetavideo tarjetavideo, BigDecimal costototal) {
         this.id = id;
-        this.discoduroByDiscoduro = discoduroByDiscoduro;
-        this.discoduroByDiscoduroadicional = discoduroByDiscoduroadicional;
+        this.discoduroByIddiscoduro = discoduroByIddiscoduro;
+        this.discoduroByIddiscoduroadicional = discoduroByIddiscoduroadicional;
         this.disipadorcalor = disipadorcalor;
         this.fuentepoder = fuentepoder;
         this.gabinete = gabinete;
-        this.memoriaramByMemoriaramadicional = memoriaramByMemoriaramadicional;
-        this.memoriaramByMemoriaram = memoriaramByMemoriaram;
+        this.memoriaramByIdmemoriaramadicional = memoriaramByIdmemoriaramadicional;
+        this.memoriaramByIdmemoriaram = memoriaramByIdmemoriaram;
         this.procesador = procesador;
         this.tarjetamadre = tarjetamadre;
         this.tarjetavideo = tarjetavideo;
         this.costototal = costototal;
     }
-    public Computadora(long id, Discoduro discoduroByDiscoduro, Discoduro discoduroByDiscoduroadicional, Disipadorcalor disipadorcalor, Fuentepoder fuentepoder, Gabinete gabinete, Memoriaram memoriaramByMemoriaramadicional, Memoriaram memoriaramByMemoriaram, Procesador procesador, Tarjetamadre tarjetamadre, Tarjetavideo tarjetavideo, BigDecimal costototal, Set ventas) {
+    public Computadora(long id, Discoduro discoduroByIddiscoduro, Discoduro discoduroByIddiscoduroadicional, Disipadorcalor disipadorcalor, Fuentepoder fuentepoder, Gabinete gabinete, Memoriaram memoriaramByIdmemoriaramadicional, Memoriaram memoriaramByIdmemoriaram, Procesador procesador, Tarjetamadre tarjetamadre, Tarjetavideo tarjetavideo, BigDecimal costototal, Set ventas) {
        this.id = id;
-       this.discoduroByDiscoduro = discoduroByDiscoduro;
-       this.discoduroByDiscoduroadicional = discoduroByDiscoduroadicional;
+       this.discoduroByIddiscoduro = discoduroByIddiscoduro;
+       this.discoduroByIddiscoduroadicional = discoduroByIddiscoduroadicional;
        this.disipadorcalor = disipadorcalor;
        this.fuentepoder = fuentepoder;
        this.gabinete = gabinete;
-       this.memoriaramByMemoriaramadicional = memoriaramByMemoriaramadicional;
-       this.memoriaramByMemoriaram = memoriaramByMemoriaram;
+       this.memoriaramByIdmemoriaramadicional = memoriaramByIdmemoriaramadicional;
+       this.memoriaramByIdmemoriaram = memoriaramByIdmemoriaram;
        this.procesador = procesador;
        this.tarjetamadre = tarjetamadre;
        this.tarjetavideo = tarjetavideo;
@@ -67,19 +67,19 @@ public class Computadora  implements java.io.Serializable {
     public void setId(long id) {
         this.id = id;
     }
-    public Discoduro getDiscoduroByDiscoduro() {
-        return this.discoduroByDiscoduro;
+    public Discoduro getDiscoduroByIddiscoduro() {
+        return this.discoduroByIddiscoduro;
     }
     
-    public void setDiscoduroByDiscoduro(Discoduro discoduroByDiscoduro) {
-        this.discoduroByDiscoduro = discoduroByDiscoduro;
+    public void setDiscoduroByIddiscoduro(Discoduro discoduroByIddiscoduro) {
+        this.discoduroByIddiscoduro = discoduroByIddiscoduro;
     }
-    public Discoduro getDiscoduroByDiscoduroadicional() {
-        return this.discoduroByDiscoduroadicional;
+    public Discoduro getDiscoduroByIddiscoduroadicional() {
+        return this.discoduroByIddiscoduroadicional;
     }
     
-    public void setDiscoduroByDiscoduroadicional(Discoduro discoduroByDiscoduroadicional) {
-        this.discoduroByDiscoduroadicional = discoduroByDiscoduroadicional;
+    public void setDiscoduroByIddiscoduroadicional(Discoduro discoduroByIddiscoduroadicional) {
+        this.discoduroByIddiscoduroadicional = discoduroByIddiscoduroadicional;
     }
     public Disipadorcalor getDisipadorcalor() {
         return this.disipadorcalor;
@@ -102,19 +102,19 @@ public class Computadora  implements java.io.Serializable {
     public void setGabinete(Gabinete gabinete) {
         this.gabinete = gabinete;
     }
-    public Memoriaram getMemoriaramByMemoriaramadicional() {
-        return this.memoriaramByMemoriaramadicional;
+    public Memoriaram getMemoriaramByIdmemoriaramadicional() {
+        return this.memoriaramByIdmemoriaramadicional;
     }
     
-    public void setMemoriaramByMemoriaramadicional(Memoriaram memoriaramByMemoriaramadicional) {
-        this.memoriaramByMemoriaramadicional = memoriaramByMemoriaramadicional;
+    public void setMemoriaramByIdmemoriaramadicional(Memoriaram memoriaramByIdmemoriaramadicional) {
+        this.memoriaramByIdmemoriaramadicional = memoriaramByIdmemoriaramadicional;
     }
-    public Memoriaram getMemoriaramByMemoriaram() {
-        return this.memoriaramByMemoriaram;
+    public Memoriaram getMemoriaramByIdmemoriaram() {
+        return this.memoriaramByIdmemoriaram;
     }
     
-    public void setMemoriaramByMemoriaram(Memoriaram memoriaramByMemoriaram) {
-        this.memoriaramByMemoriaram = memoriaramByMemoriaram;
+    public void setMemoriaramByIdmemoriaram(Memoriaram memoriaramByIdmemoriaram) {
+        this.memoriaramByIdmemoriaram = memoriaramByIdmemoriaram;
     }
     public Procesador getProcesador() {
         return this.procesador;

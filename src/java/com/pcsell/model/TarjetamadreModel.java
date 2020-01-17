@@ -51,7 +51,7 @@ public class TarjetamadreModel implements ITarjetamadreModel{
     }
 
     @Override
-    public void crearRegistr(Tarjetamadre tarjeta) {
+    public void crearRegistro(Tarjetamadre tarjeta) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();

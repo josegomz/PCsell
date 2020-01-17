@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 16/01/2020 11:03:10 PM by Hibernate Tools 4.3.1
+// Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -22,8 +22,8 @@ public class Memoriaram  implements java.io.Serializable {
      private String tipo;
      private Integer cantidad;
      private String descripcion;
-     private Set computadorasForMemoriaramadicional = new HashSet(0);
-     private Set computadorasForMemoriaram = new HashSet(0);
+     private Set computadorasForIdmemoriaramadicional = new HashSet(0);
+     private Set computadorasForIdmemoriaram = new HashSet(0);
 
     public Memoriaram() {
     }
@@ -38,7 +38,7 @@ public class Memoriaram  implements java.io.Serializable {
         this.capacidad = capacidad;
         this.precio = precio;
     }
-    public Memoriaram(long id, Imagen imagen, String marca, String modelo, BigDecimal velocidad, int capacidad, BigDecimal precio, String tipo, Integer cantidad, String descripcion, Set computadorasForMemoriaramadicional, Set computadorasForMemoriaram) {
+    public Memoriaram(long id, Imagen imagen, String marca, String modelo, BigDecimal velocidad, int capacidad, BigDecimal precio, String tipo, Integer cantidad, String descripcion, Set computadorasForIdmemoriaramadicional, Set computadorasForIdmemoriaram) {
        this.id = id;
        this.imagen = imagen;
        this.marca = marca;
@@ -49,8 +49,8 @@ public class Memoriaram  implements java.io.Serializable {
        this.tipo = tipo;
        this.cantidad = cantidad;
        this.descripcion = descripcion;
-       this.computadorasForMemoriaramadicional = computadorasForMemoriaramadicional;
-       this.computadorasForMemoriaram = computadorasForMemoriaram;
+       this.computadorasForIdmemoriaramadicional = computadorasForIdmemoriaramadicional;
+       this.computadorasForIdmemoriaram = computadorasForIdmemoriaram;
     }
    
     public long getId() {
@@ -123,19 +123,19 @@ public class Memoriaram  implements java.io.Serializable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    public Set getComputadorasForMemoriaramadicional() {
-        return this.computadorasForMemoriaramadicional;
+    public Set getComputadorasForIdmemoriaramadicional() {
+        return this.computadorasForIdmemoriaramadicional;
     }
     
-    public void setComputadorasForMemoriaramadicional(Set computadorasForMemoriaramadicional) {
-        this.computadorasForMemoriaramadicional = computadorasForMemoriaramadicional;
+    public void setComputadorasForIdmemoriaramadicional(Set computadorasForIdmemoriaramadicional) {
+        this.computadorasForIdmemoriaramadicional = computadorasForIdmemoriaramadicional;
     }
-    public Set getComputadorasForMemoriaram() {
-        return this.computadorasForMemoriaram;
+    public Set getComputadorasForIdmemoriaram() {
+        return this.computadorasForIdmemoriaram;
     }
     
-    public void setComputadorasForMemoriaram(Set computadorasForMemoriaram) {
-        this.computadorasForMemoriaram = computadorasForMemoriaram;
+    public void setComputadorasForIdmemoriaram(Set computadorasForIdmemoriaram) {
+        this.computadorasForIdmemoriaram = computadorasForIdmemoriaram;
     }
 
 

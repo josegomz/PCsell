@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 16/01/2020 11:03:10 PM by Hibernate Tools 4.3.1
+// Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -17,7 +17,6 @@ public class Gabinete  implements java.io.Serializable {
      private Tamaniotm tamaniotm;
      private String marca;
      private String modelo;
-     private String tamaño;
      private String descripcion;
      private BigDecimal precio;
      private Integer cantidad;
@@ -27,22 +26,20 @@ public class Gabinete  implements java.io.Serializable {
     }
 
 	
-    public Gabinete(long id, Imagen imagen, Tamaniotm tamaniotm, String marca, String modelo, String tamaño, BigDecimal precio) {
+    public Gabinete(long id, Imagen imagen, Tamaniotm tamaniotm, String marca, String modelo, BigDecimal precio) {
         this.id = id;
         this.imagen = imagen;
         this.tamaniotm = tamaniotm;
         this.marca = marca;
         this.modelo = modelo;
-        this.tamaño = tamaño;
         this.precio = precio;
     }
-    public Gabinete(long id, Imagen imagen, Tamaniotm tamaniotm, String marca, String modelo, String tamaño, String descripcion, BigDecimal precio, Integer cantidad, Set computadoras) {
+    public Gabinete(long id, Imagen imagen, Tamaniotm tamaniotm, String marca, String modelo, String descripcion, BigDecimal precio, Integer cantidad, Set computadoras) {
        this.id = id;
        this.imagen = imagen;
        this.tamaniotm = tamaniotm;
        this.marca = marca;
        this.modelo = modelo;
-       this.tamaño = tamaño;
        this.descripcion = descripcion;
        this.precio = precio;
        this.cantidad = cantidad;
@@ -83,13 +80,6 @@ public class Gabinete  implements java.io.Serializable {
     
     public void setModelo(String modelo) {
         this.modelo = modelo;
-    }
-    public String getTamaño() {
-        return this.tamaño;
-    }
-    
-    public void setTamaño(String tamaño) {
-        this.tamaño = tamaño;
     }
     public String getDescripcion() {
         return this.descripcion;

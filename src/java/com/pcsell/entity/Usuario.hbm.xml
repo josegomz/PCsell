@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 16/01/2020 11:03:11 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.pcsell.entity.Usuario" table="usuario" schema="public" optimistic-lock="version">
         <id name="id" type="long">
             <column name="id" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <property name="nombre" type="string">
             <column name="nombre" />
@@ -22,7 +22,7 @@
         </property>
         <set name="ventas" table="venta" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="usuario" not-null="true" />
+                <column name="idusuario" not-null="true" />
             </key>
             <one-to-many class="com.pcsell.entity.Venta" />
         </set>

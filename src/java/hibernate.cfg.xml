@@ -48,20 +48,20 @@ Contributor(s):
     <property name="hibernate.connection.password">root</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
     <property name="hibernate.show_sql">true</property>
-    <mapping resource="com/pcsell/entity/Gabinete.hbm.xml"/>
     <mapping resource="com/pcsell/entity/Tarjetamadre.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Usuario.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Disipadorcalor.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Imagen.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Venta.hbm.xml"/>
     <mapping resource="com/pcsell/entity/Fuentepoder.hbm.xml"/>
+    <mapping resource="com/pcsell/entity/Usuario.hbm.xml"/>
+    <mapping resource="com/pcsell/entity/Marcaprocesador.hbm.xml"/>
+    <mapping resource="com/pcsell/entity/Venta.hbm.xml"/>
+    <mapping resource="com/pcsell/entity/Tamaniotm.hbm.xml"/>
+    <mapping resource="com/pcsell/entity/Computadora.hbm.xml"/>
+    <mapping resource="com/pcsell/entity/Procesador.hbm.xml"/>
+    <mapping resource="com/pcsell/entity/Discoduro.hbm.xml"/>
     <mapping resource="com/pcsell/entity/Procesadordisipador.hbm.xml"/>
     <mapping resource="com/pcsell/entity/Memoriaram.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Procesador.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Computadora.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Discoduro.hbm.xml"/>
+    <mapping resource="com/pcsell/entity/Imagen.hbm.xml"/>
+    <mapping resource="com/pcsell/entity/Gabinete.hbm.xml"/>
+    <mapping resource="com/pcsell/entity/Disipadorcalor.hbm.xml"/>
     <mapping resource="com/pcsell/entity/Tarjetavideo.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Marcaprocesador.hbm.xml"/>
-    <mapping resource="com/pcsell/entity/Tamaniotm.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

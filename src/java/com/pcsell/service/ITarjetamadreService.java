@@ -16,7 +16,7 @@ public interface ITarjetamadreService {
 
     public Tarjetamadre obtenerRegistro(Long id);
 
-    public void crearRegistr(Tarjetamadre tarjeta);
+    public void crearRegistro(Tarjetamadre tarjeta);
 
     public void actualizarRegistro(Tarjetamadre tarjeta);
 
