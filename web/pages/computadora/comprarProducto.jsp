@@ -12,7 +12,7 @@
     <body>
         <div class="page-header">
             <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-                <s:a href="">
+                <s:a href="dsj">
                     <span class="navbar-brand">Inicio</span>
                 </s:a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,17 +23,17 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <s:a href="../computadora/armarPc.jsp">
-                                <span class="nav-link">Armar PC</span>
+                               <span class="nav-link">Armar PC</span>
                             </s:a>
                         </li>
                         <li class="nav-item">
                             <s:a href="../computadora/comprarProducto.jsp">
-                                <span class="nav-link">Comprar Producto</span>
+                               <span class="nav-link">Comprar Producto</span>
                             </s:a>
                         </li>
                         <li class="nav-item">
                             <s:a href="dsj">
-                                <span class="nav-link">Mis compras</span>
+                               <span class="nav-link">Mis compras</span>
                             </s:a>
                         </li>
                         <li class="nav-item dropdown">
@@ -41,7 +41,7 @@
                                 Mi Cuenta
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <s:a href="dssj">
+                                <s:a href="dsj">
                                     <span class="dropdown-item">Perfil</span>
                                 </s:a>
                                 <s:a href="dsj">
@@ -56,25 +56,6 @@
                     </form>
                 </div>
             </nav>
-        </div>
-        <div class="container">
-            <s:form action="actionUpdateUsuario" method="POST">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <s:textfield name="usuario.coreoElectronico" type="email" id="inputEmail4" cssClass="form-control" placeholder="Email"></s:textfield>
-                    </div>
-                    <div class="form-group col-md-6">
-                    <s:textfield name="usuario.contrasenia" type="password" size="100px" id="inputPassword4" cssClass="form-control" placeholder="Password"></s:textfield>
-                    </div>
-                </div>
-                <div class="form-group">
-                <s:textfield name="usuario.nombre" id="inputName" size="100px" placeholder="Ingrese su Nombre(s)" cssClass="form-control"></s:textfield>
-                </div>
-                <div class="form-group">
-                <s:textfield name="usuario.apellidos" type="text" id="inputApellido" placeholder="Ingrese su Apellido(s)" cssClass="form-control"></s:textfield>
-                </div>
-                <s:submit value="Actualizar" cssClass="btn btn-primary btn-block"></s:submit>
-            </s:form>
         </div>
     </body>
 </html>

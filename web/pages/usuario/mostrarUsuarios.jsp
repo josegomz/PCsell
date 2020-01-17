@@ -22,12 +22,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <s:a href="dsj">
+                            <s:a href="../computadora/armarPc.jsp">
                                <span class="nav-link">Armar PC</span>
                             </s:a>
                         </li>
                         <li class="nav-item">
-                            <s:a href="dsj">
+                            <s:a href="../computadora/comprarProducto.jsp">
                                <span class="nav-link">Comprar Producto</span>
                             </s:a>
                         </li>

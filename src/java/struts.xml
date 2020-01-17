@@ -14,7 +14,31 @@
             <result name="success">/pages/usuario/mostrarUsuarios.jsp</result>
             <result name="error">/pages/usuario/errorUsuario.jsp</result>
         </action>
-        
+        <action name="actionMostrarUsuarios"
+                class="com.pcsell.controller.UsuarioController"
+                method="obtenerRegistros">
+            <result name="success">/pages/struts/mostrarUsuarios.jsp</result>
+            <result name="error">/pages/usuario/errorUsuario.jsp</result>
+        </action>
+        <action name="actionDeleteUsuario"
+                class="com.pcsell.controller.UsuarioController"
+                method="eliminarRegistro">
+            <result name="success">/pages/struts/mostrarUsuarios.jsp</result>
+            <result name="error">/pages/usuario/errorUsuario.jsp</result>
+        </action>
+        <action name="actionUpdateUsuario"
+                class="com.pcsell.controller.UsuarioController"
+                method="actualizarRegistro">
+            <result name="success">/pages/struts/mostrarUsuarios.jsp</result>
+            <result name="error">/pages/usuario/errorUsuario.jsp</result>
+        </action>
+        <action name="actionActualizarUsuario"
+            class="com.pcsell.controller.UsuarioController">
+        <result name="success">/pages/usuario/actualizarUsuario.jsp</result>
+        </action>
+        <action name="actionArmarPc" class="com.pcsell.controller.UsuarioController">
+        <result name="success">/pages/usuario/mostrarUsuario.jsp</result>
+        </action>
     </package>
     
 </struts>
