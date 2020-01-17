@@ -12,7 +12,7 @@
     <body>
         <div class="page-header">
             <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-                <s:a href="dsj">
+                <s:a href="">
                     <span class="navbar-brand">Inicio</span>
                 </s:a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <s:a href="dsj">
+                            <s:a href="actionArmarPc">
                                 <span class="nav-link">Armar PC</span>
                             </s:a>
                         </li>
@@ -41,7 +41,7 @@
                                 Mi Cuenta
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <s:a href="dsj">
+                                <s:a href="dssj">
                                     <span class="dropdown-item">Perfil</span>
                                 </s:a>
                                 <s:a href="dsj">

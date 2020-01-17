@@ -53,9 +53,12 @@ public class UsuarioModel implements IUsuarioModel{
     @Override
     public void crearRegistro(Usuario usuario) {
         try {
+             System.out.println("-ZZZZZZ---------------------------Nombre: " + usuario.getCoreoElectronico());
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
+            
+            System.out.println("----------------------------Nombre: " + usuario.getCoreoElectronico());
             session.save(usuario);
             session.getTransaction().commit();
             session.close();
