@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 16/01/2020 08:44:30 AM by Hibernate Tools 4.3.1 -->
+<!-- Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.pcsell.entity.Procesador" table="procesador" schema="public" optimistic-lock="version">
         <id name="id" type="long">
             <column name="id" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <many-to-one name="imagen" class="com.pcsell.entity.Imagen" fetch="select">
-            <column name="imagen" not-null="true" />
+            <column name="idimagen" not-null="true" />
         </many-to-one>
-        <many-to-one name="marcaProcesador" class="com.pcsell.entity.MarcaProcesador" fetch="select">
-            <column name="marca" not-null="true" />
+        <many-to-one name="marcaprocesador" class="com.pcsell.entity.Marcaprocesador" fetch="select">
+            <column name="idmarca" not-null="true" />
         </many-to-one>
         <property name="modelo" type="string">
             <column name="modelo" not-null="true" />
@@ -20,11 +20,11 @@
         <property name="nucleos" type="int">
             <column name="nucleos" not-null="true" />
         </property>
-        <property name="hilosDeProcesamiento" type="java.lang.Integer">
-            <column name="hilos_de_procesamiento" />
+        <property name="hilosdeprocesamiento" type="java.lang.Integer">
+            <column name="hilosdeprocesamiento" />
         </property>
-        <property name="frecuenciaBase" type="big_decimal">
-            <column name="frecuencia_base" precision="131089" scale="0" />
+        <property name="frecuenciabase" type="big_decimal">
+            <column name="frecuenciabase" precision="131089" scale="0" />
         </property>
         <property name="tdp" type="big_decimal">
             <column name="tdp" precision="131089" scale="0" />
@@ -40,7 +40,7 @@
         </property>
         <set name="computadoras" table="computadora" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="procesador" not-null="true" />
+                <column name="idprocesador" not-null="true" />
             </key>
             <one-to-many class="com.pcsell.entity.Computadora" />
         </set>

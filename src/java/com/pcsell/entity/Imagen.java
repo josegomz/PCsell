@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 16/01/2020 08:44:30 AM by Hibernate Tools 4.3.1
+// Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -15,15 +15,15 @@ public class Imagen  implements java.io.Serializable {
      private String nombre;
      private String tipo;
      private String ruta;
-     private Set discoDuros = new HashSet(0);
-     private Set tarjetaVideos = new HashSet(0);
-     private Set tarjetaMadres = new HashSet(0);
-     private Set marcaProcesadors = new HashSet(0);
+     private Set discoduros = new HashSet(0);
+     private Set tarjetavideos = new HashSet(0);
+     private Set tarjetamadres = new HashSet(0);
+     private Set marcaprocesadors = new HashSet(0);
      private Set gabinetes = new HashSet(0);
      private Set procesadors = new HashSet(0);
-     private Set fuentePoders = new HashSet(0);
-     private Set disipadorCalors = new HashSet(0);
-     private Set memoriaRams = new HashSet(0);
+     private Set fuentepoders = new HashSet(0);
+     private Set disipadorcalors = new HashSet(0);
+     private Set memoriarams = new HashSet(0);
 
     public Imagen() {
     }
@@ -35,20 +35,20 @@ public class Imagen  implements java.io.Serializable {
         this.tipo = tipo;
         this.ruta = ruta;
     }
-    public Imagen(long id, String nombre, String tipo, String ruta, Set discoDuros, Set tarjetaVideos, Set tarjetaMadres, Set marcaProcesadors, Set gabinetes, Set procesadors, Set fuentePoders, Set disipadorCalors, Set memoriaRams) {
+    public Imagen(long id, String nombre, String tipo, String ruta, Set discoduros, Set tarjetavideos, Set tarjetamadres, Set marcaprocesadors, Set gabinetes, Set procesadors, Set fuentepoders, Set disipadorcalors, Set memoriarams) {
        this.id = id;
        this.nombre = nombre;
        this.tipo = tipo;
        this.ruta = ruta;
-       this.discoDuros = discoDuros;
-       this.tarjetaVideos = tarjetaVideos;
-       this.tarjetaMadres = tarjetaMadres;
-       this.marcaProcesadors = marcaProcesadors;
+       this.discoduros = discoduros;
+       this.tarjetavideos = tarjetavideos;
+       this.tarjetamadres = tarjetamadres;
+       this.marcaprocesadors = marcaprocesadors;
        this.gabinetes = gabinetes;
        this.procesadors = procesadors;
-       this.fuentePoders = fuentePoders;
-       this.disipadorCalors = disipadorCalors;
-       this.memoriaRams = memoriaRams;
+       this.fuentepoders = fuentepoders;
+       this.disipadorcalors = disipadorcalors;
+       this.memoriarams = memoriarams;
     }
    
     public long getId() {
@@ -79,33 +79,33 @@ public class Imagen  implements java.io.Serializable {
     public void setRuta(String ruta) {
         this.ruta = ruta;
     }
-    public Set getDiscoDuros() {
-        return this.discoDuros;
+    public Set getDiscoduros() {
+        return this.discoduros;
     }
     
-    public void setDiscoDuros(Set discoDuros) {
-        this.discoDuros = discoDuros;
+    public void setDiscoduros(Set discoduros) {
+        this.discoduros = discoduros;
     }
-    public Set getTarjetaVideos() {
-        return this.tarjetaVideos;
-    }
-    
-    public void setTarjetaVideos(Set tarjetaVideos) {
-        this.tarjetaVideos = tarjetaVideos;
-    }
-    public Set getTarjetaMadres() {
-        return this.tarjetaMadres;
+    public Set getTarjetavideos() {
+        return this.tarjetavideos;
     }
     
-    public void setTarjetaMadres(Set tarjetaMadres) {
-        this.tarjetaMadres = tarjetaMadres;
+    public void setTarjetavideos(Set tarjetavideos) {
+        this.tarjetavideos = tarjetavideos;
     }
-    public Set getMarcaProcesadors() {
-        return this.marcaProcesadors;
+    public Set getTarjetamadres() {
+        return this.tarjetamadres;
     }
     
-    public void setMarcaProcesadors(Set marcaProcesadors) {
-        this.marcaProcesadors = marcaProcesadors;
+    public void setTarjetamadres(Set tarjetamadres) {
+        this.tarjetamadres = tarjetamadres;
+    }
+    public Set getMarcaprocesadors() {
+        return this.marcaprocesadors;
+    }
+    
+    public void setMarcaprocesadors(Set marcaprocesadors) {
+        this.marcaprocesadors = marcaprocesadors;
     }
     public Set getGabinetes() {
         return this.gabinetes;
@@ -121,26 +121,26 @@ public class Imagen  implements java.io.Serializable {
     public void setProcesadors(Set procesadors) {
         this.procesadors = procesadors;
     }
-    public Set getFuentePoders() {
-        return this.fuentePoders;
+    public Set getFuentepoders() {
+        return this.fuentepoders;
     }
     
-    public void setFuentePoders(Set fuentePoders) {
-        this.fuentePoders = fuentePoders;
+    public void setFuentepoders(Set fuentepoders) {
+        this.fuentepoders = fuentepoders;
     }
-    public Set getDisipadorCalors() {
-        return this.disipadorCalors;
-    }
-    
-    public void setDisipadorCalors(Set disipadorCalors) {
-        this.disipadorCalors = disipadorCalors;
-    }
-    public Set getMemoriaRams() {
-        return this.memoriaRams;
+    public Set getDisipadorcalors() {
+        return this.disipadorcalors;
     }
     
-    public void setMemoriaRams(Set memoriaRams) {
-        this.memoriaRams = memoriaRams;
+    public void setDisipadorcalors(Set disipadorcalors) {
+        this.disipadorcalors = disipadorcalors;
+    }
+    public Set getMemoriarams() {
+        return this.memoriarams;
+    }
+    
+    public void setMemoriarams(Set memoriarams) {
+        this.memoriarams = memoriarams;
     }
 
 

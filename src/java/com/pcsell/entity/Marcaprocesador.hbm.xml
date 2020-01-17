@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pcsell.entity.Marcaprocesador" table="marcaprocesador" schema="public" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="imagen" class="com.pcsell.entity.Imagen" fetch="select">
+            <column name="idimagen" not-null="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" not-null="true" />
+        </property>
+        <set name="procesadordisipadors" table="procesadordisipador" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idprocesador" not-null="true" />
+            </key>
+            <one-to-many class="com.pcsell.entity.Procesadordisipador" />
+        </set>
+        <set name="tarjetamadres" table="tarjetamadre" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idprocesador" not-null="true" />
+            </key>
+            <one-to-many class="com.pcsell.entity.Tarjetamadre" />
+        </set>
+        <set name="procesadors" table="procesador" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idmarca" not-null="true" />
+            </key>
+            <one-to-many class="com.pcsell.entity.Procesador" />
+        </set>
+    </class>
+</hibernate-mapping>

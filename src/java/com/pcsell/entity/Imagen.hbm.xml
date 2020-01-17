@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 16/01/2020 08:44:30 AM by Hibernate Tools 4.3.1 -->
+<!-- Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.pcsell.entity.Imagen" table="imagen" schema="public" optimistic-lock="version">
         <id name="id" type="long">
             <column name="id" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <property name="nombre" type="string">
             <column name="nombre" not-null="true" />
@@ -17,59 +17,59 @@
         <property name="ruta" type="string">
             <column name="ruta" not-null="true" />
         </property>
-        <set name="discoDuros" table="disco_duro" inverse="true" lazy="true" fetch="select">
+        <set name="discoduros" table="discoduro" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="imagen" not-null="true" />
+                <column name="idimagen" not-null="true" />
             </key>
-            <one-to-many class="com.pcsell.entity.DiscoDuro" />
+            <one-to-many class="com.pcsell.entity.Discoduro" />
         </set>
-        <set name="tarjetaVideos" table="tarjeta_video" inverse="true" lazy="true" fetch="select">
+        <set name="tarjetavideos" table="tarjetavideo" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="imagen" not-null="true" />
+                <column name="idimagen" not-null="true" />
             </key>
-            <one-to-many class="com.pcsell.entity.TarjetaVideo" />
+            <one-to-many class="com.pcsell.entity.Tarjetavideo" />
         </set>
-        <set name="tarjetaMadres" table="tarjeta_madre" inverse="true" lazy="true" fetch="select">
+        <set name="tarjetamadres" table="tarjetamadre" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="imagen" not-null="true" />
+                <column name="idimagen" not-null="true" />
             </key>
-            <one-to-many class="com.pcsell.entity.TarjetaMadre" />
+            <one-to-many class="com.pcsell.entity.Tarjetamadre" />
         </set>
-        <set name="marcaProcesadors" table="marca_procesador" inverse="true" lazy="true" fetch="select">
+        <set name="marcaprocesadors" table="marcaprocesador" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="imagen" not-null="true" />
+                <column name="idimagen" not-null="true" />
             </key>
-            <one-to-many class="com.pcsell.entity.MarcaProcesador" />
+            <one-to-many class="com.pcsell.entity.Marcaprocesador" />
         </set>
         <set name="gabinetes" table="gabinete" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="imagen" not-null="true" />
+                <column name="idimagen" not-null="true" />
             </key>
             <one-to-many class="com.pcsell.entity.Gabinete" />
         </set>
         <set name="procesadors" table="procesador" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="imagen" not-null="true" />
+                <column name="idimagen" not-null="true" />
             </key>
             <one-to-many class="com.pcsell.entity.Procesador" />
         </set>
-        <set name="fuentePoders" table="fuente_poder" inverse="true" lazy="true" fetch="select">
+        <set name="fuentepoders" table="fuentepoder" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="imagen" not-null="true" />
+                <column name="idimagen" not-null="true" />
             </key>
-            <one-to-many class="com.pcsell.entity.FuentePoder" />
+            <one-to-many class="com.pcsell.entity.Fuentepoder" />
         </set>
-        <set name="disipadorCalors" table="disipador_calor" inverse="true" lazy="true" fetch="select">
+        <set name="disipadorcalors" table="disipadorcalor" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="imagen" not-null="true" />
+                <column name="idimagen" not-null="true" />
             </key>
-            <one-to-many class="com.pcsell.entity.DisipadorCalor" />
+            <one-to-many class="com.pcsell.entity.Disipadorcalor" />
         </set>
-        <set name="memoriaRams" table="memoria_ram" inverse="true" lazy="true" fetch="select">
+        <set name="memoriarams" table="memoriaram" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="imagen" not-null="true" />
+                <column name="idimagen" not-null="true" />
             </key>
-            <one-to-many class="com.pcsell.entity.MemoriaRam" />
+            <one-to-many class="com.pcsell.entity.Memoriaram" />
         </set>
     </class>
 </hibernate-mapping>

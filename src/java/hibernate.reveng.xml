@@ -41,19 +41,19 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="pcsell" match-schema="public"/>
-  <table-filter match-name="disipador_calor"/>
-  <table-filter match-name="usuario"/>
-  <table-filter match-name="fuente_poder"/>
-  <table-filter match-name="gabinete"/>
-  <table-filter match-name="procesador"/>
   <table-filter match-name="imagen"/>
-  <table-filter match-name="tarjeta_madre"/>
-  <table-filter match-name="marca_procesador"/>
-  <table-filter match-name="procesador_disipador"/>
-  <table-filter match-name="disco_duro"/>
-  <table-filter match-name="memoria_ram"/>
-  <table-filter match-name="tarjeta_video"/>
   <table-filter match-name="venta"/>
-  <table-filter match-name="tamanio_tm"/>
+  <table-filter match-name="discoduro"/>
+  <table-filter match-name="tarjetamadre"/>
+  <table-filter match-name="tarjetavideo"/>
+  <table-filter match-name="procesador"/>
+  <table-filter match-name="usuario"/>
   <table-filter match-name="computadora"/>
+  <table-filter match-name="procesadordisipador"/>
+  <table-filter match-name="memoriaram"/>
+  <table-filter match-name="fuentepoder"/>
+  <table-filter match-name="disipadorcalor"/>
+  <table-filter match-name="gabinete"/>
+  <table-filter match-name="tamaniotm"/>
+  <table-filter match-name="marcaprocesador"/>
 </hibernate-reverse-engineering>
