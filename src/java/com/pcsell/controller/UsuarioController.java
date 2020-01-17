@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+    Universidad de la Sierra Sur 
+    Licenciatura en Informática  Grupo: 706 
+    Equipo: Gómez Sánchez José Benito
+            Nasario Anselmo Belisario
+            Padilla Bustamante Uriel Gustavo
  */
 package com.pcsell.controller;
 import static com.opensymphony.xwork2.Action.ERROR;
@@ -15,9 +17,13 @@ import java.util.ArrayList;
  *
  * @author Uriel
  */
+/*
+  Controlador de modulo usuario
+*/
 public class UsuarioController {
     IUsuarioService service;
     private Usuario usuario;
+    private long id;
     private ArrayList<Usuario> listaRegistros;
 
     public ArrayList<Usuario> getListaRegistros() {
@@ -87,11 +93,10 @@ public class UsuarioController {
             return ERROR;
         }
     }
-    public String obtenerRegistro()throws Exception{
+    public String obtenerRegistro(long id)throws Exception{
         try{
             service = new UsuarioService();
-            service.obtenerRegistro(usuario.getId());
-            listaRegistros = (ArrayList<Usuario>) service.obtenerRegistros();
+            usuario = service.obtenerRegistro(id);
             return SUCCESS;
         }catch(Exception e){
             System.out.println("Error");
