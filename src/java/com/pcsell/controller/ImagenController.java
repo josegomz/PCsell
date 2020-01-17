@@ -5,10 +5,22 @@
  */
 package com.pcsell.controller;
 
+import com.opensymphony.xwork2.ActionSupport;
+import com.pcsell.entity.Imagen;
+import com.pcsell.service.IImagenService;
+import java.util.List;
+
 /**
  *
  * @author macbookair
  */
-public class ImagenController {
+public class ImagenController extends ActionSupport{
     
+    IImagenService iImagenService;
+    private Imagen imagen;
+    private List<Imagen> listaRegistros;
+    
+    public String obtenerRegistro() throws Exception{
+        return SUCCESS;
+    }
 }
