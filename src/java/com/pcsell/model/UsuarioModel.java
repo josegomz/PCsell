@@ -27,6 +27,9 @@ public class UsuarioModel implements IUsuarioModel{
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             lista = (ArrayList<Usuario>) session.createQuery("FROM Usuario").list();
+            for (Usuario u : lista) {
+                System.out.println("Nombre: " + u.getNombre());
+            }
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
@@ -95,4 +98,8 @@ public class UsuarioModel implements IUsuarioModel{
         }
     }
     
+    public static void main(String[] args) {
+        IUsuarioModel iUsuarioModel = new UsuarioModel();
+        iUsuarioModel.obtenerRegistros();
+    }
 }

@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 16/01/2020 08:44:30 AM by Hibernate Tools 4.3.1
+// Generated 16/01/2020 11:03:10 PM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -14,7 +14,7 @@ public class Gabinete  implements java.io.Serializable {
 
      private long id;
      private Imagen imagen;
-     private TamanioTm tamanioTm;
+     private Tamaniotm tamaniotm;
      private String marca;
      private String modelo;
      private String tamaño;
@@ -27,19 +27,19 @@ public class Gabinete  implements java.io.Serializable {
     }
 
 	
-    public Gabinete(long id, Imagen imagen, TamanioTm tamanioTm, String marca, String modelo, String tamaño, BigDecimal precio) {
+    public Gabinete(long id, Imagen imagen, Tamaniotm tamaniotm, String marca, String modelo, String tamaño, BigDecimal precio) {
         this.id = id;
         this.imagen = imagen;
-        this.tamanioTm = tamanioTm;
+        this.tamaniotm = tamaniotm;
         this.marca = marca;
         this.modelo = modelo;
         this.tamaño = tamaño;
         this.precio = precio;
     }
-    public Gabinete(long id, Imagen imagen, TamanioTm tamanioTm, String marca, String modelo, String tamaño, String descripcion, BigDecimal precio, Integer cantidad, Set computadoras) {
+    public Gabinete(long id, Imagen imagen, Tamaniotm tamaniotm, String marca, String modelo, String tamaño, String descripcion, BigDecimal precio, Integer cantidad, Set computadoras) {
        this.id = id;
        this.imagen = imagen;
-       this.tamanioTm = tamanioTm;
+       this.tamaniotm = tamaniotm;
        this.marca = marca;
        this.modelo = modelo;
        this.tamaño = tamaño;
@@ -63,12 +63,12 @@ public class Gabinete  implements java.io.Serializable {
     public void setImagen(Imagen imagen) {
         this.imagen = imagen;
     }
-    public TamanioTm getTamanioTm() {
-        return this.tamanioTm;
+    public Tamaniotm getTamaniotm() {
+        return this.tamaniotm;
     }
     
-    public void setTamanioTm(TamanioTm tamanioTm) {
-        this.tamanioTm = tamanioTm;
+    public void setTamaniotm(Tamaniotm tamaniotm) {
+        this.tamaniotm = tamaniotm;
     }
     public String getMarca() {
         return this.marca;

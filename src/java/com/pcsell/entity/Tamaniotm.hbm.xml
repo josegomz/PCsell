@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 16/01/2020 11:03:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pcsell.entity.Tamaniotm" table="tamaniotm" schema="public" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="tamanio" type="string">
+            <column name="tamanio" not-null="true" />
+        </property>
+        <set name="tarjetamadres" table="tarjetamadre" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tamanio" not-null="true" />
+            </key>
+            <one-to-many class="com.pcsell.entity.Tarjetamadre" />
+        </set>
+        <set name="fuentepoders" table="fuentepoder" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tamaniotm" not-null="true" />
+            </key>
+            <one-to-many class="com.pcsell.entity.Fuentepoder" />
+        </set>
+        <set name="gabinetes" table="gabinete" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tamaniotm" not-null="true" />
+            </key>
+            <one-to-many class="com.pcsell.entity.Gabinete" />
+        </set>
+    </class>
+</hibernate-mapping>

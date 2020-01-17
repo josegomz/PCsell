@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 16/01/2020 08:44:30 AM by Hibernate Tools 4.3.1
+// Generated 16/01/2020 11:03:10 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -14,7 +14,7 @@ public class Usuario  implements java.io.Serializable {
      private long id;
      private String nombre;
      private String apellidos;
-     private String coreoElectronico;
+     private String correoelectronico;
      private String contrasenia;
      private Set ventas = new HashSet(0);
 
@@ -22,16 +22,16 @@ public class Usuario  implements java.io.Serializable {
     }
 
 	
-    public Usuario(long id, String coreoElectronico, String contrasenia) {
+    public Usuario(long id, String correoelectronico, String contrasenia) {
         this.id = id;
-        this.coreoElectronico = coreoElectronico;
+        this.correoelectronico = correoelectronico;
         this.contrasenia = contrasenia;
     }
-    public Usuario(long id, String nombre, String apellidos, String coreoElectronico, String contrasenia, Set ventas) {
+    public Usuario(long id, String nombre, String apellidos, String correoelectronico, String contrasenia, Set ventas) {
        this.id = id;
        this.nombre = nombre;
        this.apellidos = apellidos;
-       this.coreoElectronico = coreoElectronico;
+       this.correoelectronico = correoelectronico;
        this.contrasenia = contrasenia;
        this.ventas = ventas;
     }
@@ -57,12 +57,12 @@ public class Usuario  implements java.io.Serializable {
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
-    public String getCoreoElectronico() {
-        return this.coreoElectronico;
+    public String getCorreoelectronico() {
+        return this.correoelectronico;
     }
     
-    public void setCoreoElectronico(String coreoElectronico) {
-        this.coreoElectronico = coreoElectronico;
+    public void setCorreoelectronico(String correoelectronico) {
+        this.correoelectronico = correoelectronico;
     }
     public String getContrasenia() {
         return this.contrasenia;

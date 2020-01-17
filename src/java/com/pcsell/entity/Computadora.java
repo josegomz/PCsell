@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 16/01/2020 08:44:30 AM by Hibernate Tools 4.3.1
+// Generated 16/01/2020 11:03:10 PM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -13,50 +13,50 @@ public class Computadora  implements java.io.Serializable {
 
 
      private long id;
-     private DiscoDuro discoDuroByDiscoDuro;
-     private DiscoDuro discoDuroByDiscoDuroAdicional;
-     private DisipadorCalor disipadorCalor;
-     private FuentePoder fuentePoder;
+     private Discoduro discoduroByDiscoduro;
+     private Discoduro discoduroByDiscoduroadicional;
+     private Disipadorcalor disipadorcalor;
+     private Fuentepoder fuentepoder;
      private Gabinete gabinete;
-     private MemoriaRam memoriaRamByMemoriaRamAdicional;
-     private MemoriaRam memoriaRamByMemoriaRam;
+     private Memoriaram memoriaramByMemoriaramadicional;
+     private Memoriaram memoriaramByMemoriaram;
      private Procesador procesador;
-     private TarjetaMadre tarjetaMadre;
-     private TarjetaVideo tarjetaVideo;
-     private BigDecimal costoTotal;
+     private Tarjetamadre tarjetamadre;
+     private Tarjetavideo tarjetavideo;
+     private BigDecimal costototal;
      private Set ventas = new HashSet(0);
 
     public Computadora() {
     }
 
 	
-    public Computadora(long id, DiscoDuro discoDuroByDiscoDuro, DiscoDuro discoDuroByDiscoDuroAdicional, DisipadorCalor disipadorCalor, FuentePoder fuentePoder, Gabinete gabinete, MemoriaRam memoriaRamByMemoriaRamAdicional, MemoriaRam memoriaRamByMemoriaRam, Procesador procesador, TarjetaMadre tarjetaMadre, TarjetaVideo tarjetaVideo, BigDecimal costoTotal) {
+    public Computadora(long id, Discoduro discoduroByDiscoduro, Discoduro discoduroByDiscoduroadicional, Disipadorcalor disipadorcalor, Fuentepoder fuentepoder, Gabinete gabinete, Memoriaram memoriaramByMemoriaramadicional, Memoriaram memoriaramByMemoriaram, Procesador procesador, Tarjetamadre tarjetamadre, Tarjetavideo tarjetavideo, BigDecimal costototal) {
         this.id = id;
-        this.discoDuroByDiscoDuro = discoDuroByDiscoDuro;
-        this.discoDuroByDiscoDuroAdicional = discoDuroByDiscoDuroAdicional;
-        this.disipadorCalor = disipadorCalor;
-        this.fuentePoder = fuentePoder;
+        this.discoduroByDiscoduro = discoduroByDiscoduro;
+        this.discoduroByDiscoduroadicional = discoduroByDiscoduroadicional;
+        this.disipadorcalor = disipadorcalor;
+        this.fuentepoder = fuentepoder;
         this.gabinete = gabinete;
-        this.memoriaRamByMemoriaRamAdicional = memoriaRamByMemoriaRamAdicional;
-        this.memoriaRamByMemoriaRam = memoriaRamByMemoriaRam;
+        this.memoriaramByMemoriaramadicional = memoriaramByMemoriaramadicional;
+        this.memoriaramByMemoriaram = memoriaramByMemoriaram;
         this.procesador = procesador;
-        this.tarjetaMadre = tarjetaMadre;
-        this.tarjetaVideo = tarjetaVideo;
-        this.costoTotal = costoTotal;
+        this.tarjetamadre = tarjetamadre;
+        this.tarjetavideo = tarjetavideo;
+        this.costototal = costototal;
     }
-    public Computadora(long id, DiscoDuro discoDuroByDiscoDuro, DiscoDuro discoDuroByDiscoDuroAdicional, DisipadorCalor disipadorCalor, FuentePoder fuentePoder, Gabinete gabinete, MemoriaRam memoriaRamByMemoriaRamAdicional, MemoriaRam memoriaRamByMemoriaRam, Procesador procesador, TarjetaMadre tarjetaMadre, TarjetaVideo tarjetaVideo, BigDecimal costoTotal, Set ventas) {
+    public Computadora(long id, Discoduro discoduroByDiscoduro, Discoduro discoduroByDiscoduroadicional, Disipadorcalor disipadorcalor, Fuentepoder fuentepoder, Gabinete gabinete, Memoriaram memoriaramByMemoriaramadicional, Memoriaram memoriaramByMemoriaram, Procesador procesador, Tarjetamadre tarjetamadre, Tarjetavideo tarjetavideo, BigDecimal costototal, Set ventas) {
        this.id = id;
-       this.discoDuroByDiscoDuro = discoDuroByDiscoDuro;
-       this.discoDuroByDiscoDuroAdicional = discoDuroByDiscoDuroAdicional;
-       this.disipadorCalor = disipadorCalor;
-       this.fuentePoder = fuentePoder;
+       this.discoduroByDiscoduro = discoduroByDiscoduro;
+       this.discoduroByDiscoduroadicional = discoduroByDiscoduroadicional;
+       this.disipadorcalor = disipadorcalor;
+       this.fuentepoder = fuentepoder;
        this.gabinete = gabinete;
-       this.memoriaRamByMemoriaRamAdicional = memoriaRamByMemoriaRamAdicional;
-       this.memoriaRamByMemoriaRam = memoriaRamByMemoriaRam;
+       this.memoriaramByMemoriaramadicional = memoriaramByMemoriaramadicional;
+       this.memoriaramByMemoriaram = memoriaramByMemoriaram;
        this.procesador = procesador;
-       this.tarjetaMadre = tarjetaMadre;
-       this.tarjetaVideo = tarjetaVideo;
-       this.costoTotal = costoTotal;
+       this.tarjetamadre = tarjetamadre;
+       this.tarjetavideo = tarjetavideo;
+       this.costototal = costototal;
        this.ventas = ventas;
     }
    
@@ -67,33 +67,33 @@ public class Computadora  implements java.io.Serializable {
     public void setId(long id) {
         this.id = id;
     }
-    public DiscoDuro getDiscoDuroByDiscoDuro() {
-        return this.discoDuroByDiscoDuro;
+    public Discoduro getDiscoduroByDiscoduro() {
+        return this.discoduroByDiscoduro;
     }
     
-    public void setDiscoDuroByDiscoDuro(DiscoDuro discoDuroByDiscoDuro) {
-        this.discoDuroByDiscoDuro = discoDuroByDiscoDuro;
+    public void setDiscoduroByDiscoduro(Discoduro discoduroByDiscoduro) {
+        this.discoduroByDiscoduro = discoduroByDiscoduro;
     }
-    public DiscoDuro getDiscoDuroByDiscoDuroAdicional() {
-        return this.discoDuroByDiscoDuroAdicional;
-    }
-    
-    public void setDiscoDuroByDiscoDuroAdicional(DiscoDuro discoDuroByDiscoDuroAdicional) {
-        this.discoDuroByDiscoDuroAdicional = discoDuroByDiscoDuroAdicional;
-    }
-    public DisipadorCalor getDisipadorCalor() {
-        return this.disipadorCalor;
+    public Discoduro getDiscoduroByDiscoduroadicional() {
+        return this.discoduroByDiscoduroadicional;
     }
     
-    public void setDisipadorCalor(DisipadorCalor disipadorCalor) {
-        this.disipadorCalor = disipadorCalor;
+    public void setDiscoduroByDiscoduroadicional(Discoduro discoduroByDiscoduroadicional) {
+        this.discoduroByDiscoduroadicional = discoduroByDiscoduroadicional;
     }
-    public FuentePoder getFuentePoder() {
-        return this.fuentePoder;
+    public Disipadorcalor getDisipadorcalor() {
+        return this.disipadorcalor;
     }
     
-    public void setFuentePoder(FuentePoder fuentePoder) {
-        this.fuentePoder = fuentePoder;
+    public void setDisipadorcalor(Disipadorcalor disipadorcalor) {
+        this.disipadorcalor = disipadorcalor;
+    }
+    public Fuentepoder getFuentepoder() {
+        return this.fuentepoder;
+    }
+    
+    public void setFuentepoder(Fuentepoder fuentepoder) {
+        this.fuentepoder = fuentepoder;
     }
     public Gabinete getGabinete() {
         return this.gabinete;
@@ -102,19 +102,19 @@ public class Computadora  implements java.io.Serializable {
     public void setGabinete(Gabinete gabinete) {
         this.gabinete = gabinete;
     }
-    public MemoriaRam getMemoriaRamByMemoriaRamAdicional() {
-        return this.memoriaRamByMemoriaRamAdicional;
+    public Memoriaram getMemoriaramByMemoriaramadicional() {
+        return this.memoriaramByMemoriaramadicional;
     }
     
-    public void setMemoriaRamByMemoriaRamAdicional(MemoriaRam memoriaRamByMemoriaRamAdicional) {
-        this.memoriaRamByMemoriaRamAdicional = memoriaRamByMemoriaRamAdicional;
+    public void setMemoriaramByMemoriaramadicional(Memoriaram memoriaramByMemoriaramadicional) {
+        this.memoriaramByMemoriaramadicional = memoriaramByMemoriaramadicional;
     }
-    public MemoriaRam getMemoriaRamByMemoriaRam() {
-        return this.memoriaRamByMemoriaRam;
+    public Memoriaram getMemoriaramByMemoriaram() {
+        return this.memoriaramByMemoriaram;
     }
     
-    public void setMemoriaRamByMemoriaRam(MemoriaRam memoriaRamByMemoriaRam) {
-        this.memoriaRamByMemoriaRam = memoriaRamByMemoriaRam;
+    public void setMemoriaramByMemoriaram(Memoriaram memoriaramByMemoriaram) {
+        this.memoriaramByMemoriaram = memoriaramByMemoriaram;
     }
     public Procesador getProcesador() {
         return this.procesador;
@@ -123,26 +123,26 @@ public class Computadora  implements java.io.Serializable {
     public void setProcesador(Procesador procesador) {
         this.procesador = procesador;
     }
-    public TarjetaMadre getTarjetaMadre() {
-        return this.tarjetaMadre;
+    public Tarjetamadre getTarjetamadre() {
+        return this.tarjetamadre;
     }
     
-    public void setTarjetaMadre(TarjetaMadre tarjetaMadre) {
-        this.tarjetaMadre = tarjetaMadre;
+    public void setTarjetamadre(Tarjetamadre tarjetamadre) {
+        this.tarjetamadre = tarjetamadre;
     }
-    public TarjetaVideo getTarjetaVideo() {
-        return this.tarjetaVideo;
-    }
-    
-    public void setTarjetaVideo(TarjetaVideo tarjetaVideo) {
-        this.tarjetaVideo = tarjetaVideo;
-    }
-    public BigDecimal getCostoTotal() {
-        return this.costoTotal;
+    public Tarjetavideo getTarjetavideo() {
+        return this.tarjetavideo;
     }
     
-    public void setCostoTotal(BigDecimal costoTotal) {
-        this.costoTotal = costoTotal;
+    public void setTarjetavideo(Tarjetavideo tarjetavideo) {
+        this.tarjetavideo = tarjetavideo;
+    }
+    public BigDecimal getCostototal() {
+        return this.costototal;
+    }
+    
+    public void setCostototal(BigDecimal costototal) {
+        this.costototal = costototal;
     }
     public Set getVentas() {
         return this.ventas;

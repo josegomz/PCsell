@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 16/01/2020 08:44:30 AM by Hibernate Tools 4.3.1
+// Generated 16/01/2020 11:03:10 PM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -14,44 +14,44 @@ public class Venta  implements java.io.Serializable {
      private long id;
      private Computadora computadora;
      private Usuario usuario;
-     private Date fechaCompra;
+     private Date fechacompra;
      private int cantidad;
      private BigDecimal costo;
-     private BigDecimal costoEnvio;
-     private BigDecimal costoTotal;
-     private String lugarEnvio;
+     private BigDecimal costoenvio;
+     private BigDecimal costototal;
+     private String lugarenvio;
      private String referencias;
-     private String codigoPostal;
+     private String codigopostal;
      private String telefono;
 
     public Venta() {
     }
 
 	
-    public Venta(long id, Computadora computadora, Usuario usuario, Date fechaCompra, int cantidad, BigDecimal costo, BigDecimal costoTotal, String lugarEnvio, String codigoPostal, String telefono) {
+    public Venta(long id, Computadora computadora, Usuario usuario, Date fechacompra, int cantidad, BigDecimal costo, BigDecimal costototal, String lugarenvio, String codigopostal, String telefono) {
         this.id = id;
         this.computadora = computadora;
         this.usuario = usuario;
-        this.fechaCompra = fechaCompra;
+        this.fechacompra = fechacompra;
         this.cantidad = cantidad;
         this.costo = costo;
-        this.costoTotal = costoTotal;
-        this.lugarEnvio = lugarEnvio;
-        this.codigoPostal = codigoPostal;
+        this.costototal = costototal;
+        this.lugarenvio = lugarenvio;
+        this.codigopostal = codigopostal;
         this.telefono = telefono;
     }
-    public Venta(long id, Computadora computadora, Usuario usuario, Date fechaCompra, int cantidad, BigDecimal costo, BigDecimal costoEnvio, BigDecimal costoTotal, String lugarEnvio, String referencias, String codigoPostal, String telefono) {
+    public Venta(long id, Computadora computadora, Usuario usuario, Date fechacompra, int cantidad, BigDecimal costo, BigDecimal costoenvio, BigDecimal costototal, String lugarenvio, String referencias, String codigopostal, String telefono) {
        this.id = id;
        this.computadora = computadora;
        this.usuario = usuario;
-       this.fechaCompra = fechaCompra;
+       this.fechacompra = fechacompra;
        this.cantidad = cantidad;
        this.costo = costo;
-       this.costoEnvio = costoEnvio;
-       this.costoTotal = costoTotal;
-       this.lugarEnvio = lugarEnvio;
+       this.costoenvio = costoenvio;
+       this.costototal = costototal;
+       this.lugarenvio = lugarenvio;
        this.referencias = referencias;
-       this.codigoPostal = codigoPostal;
+       this.codigopostal = codigopostal;
        this.telefono = telefono;
     }
    
@@ -76,12 +76,12 @@ public class Venta  implements java.io.Serializable {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-    public Date getFechaCompra() {
-        return this.fechaCompra;
+    public Date getFechacompra() {
+        return this.fechacompra;
     }
     
-    public void setFechaCompra(Date fechaCompra) {
-        this.fechaCompra = fechaCompra;
+    public void setFechacompra(Date fechacompra) {
+        this.fechacompra = fechacompra;
     }
     public int getCantidad() {
         return this.cantidad;
@@ -97,26 +97,26 @@ public class Venta  implements java.io.Serializable {
     public void setCosto(BigDecimal costo) {
         this.costo = costo;
     }
-    public BigDecimal getCostoEnvio() {
-        return this.costoEnvio;
+    public BigDecimal getCostoenvio() {
+        return this.costoenvio;
     }
     
-    public void setCostoEnvio(BigDecimal costoEnvio) {
-        this.costoEnvio = costoEnvio;
+    public void setCostoenvio(BigDecimal costoenvio) {
+        this.costoenvio = costoenvio;
     }
-    public BigDecimal getCostoTotal() {
-        return this.costoTotal;
-    }
-    
-    public void setCostoTotal(BigDecimal costoTotal) {
-        this.costoTotal = costoTotal;
-    }
-    public String getLugarEnvio() {
-        return this.lugarEnvio;
+    public BigDecimal getCostototal() {
+        return this.costototal;
     }
     
-    public void setLugarEnvio(String lugarEnvio) {
-        this.lugarEnvio = lugarEnvio;
+    public void setCostototal(BigDecimal costototal) {
+        this.costototal = costototal;
+    }
+    public String getLugarenvio() {
+        return this.lugarenvio;
+    }
+    
+    public void setLugarenvio(String lugarenvio) {
+        this.lugarenvio = lugarenvio;
     }
     public String getReferencias() {
         return this.referencias;
@@ -125,12 +125,12 @@ public class Venta  implements java.io.Serializable {
     public void setReferencias(String referencias) {
         this.referencias = referencias;
     }
-    public String getCodigoPostal() {
-        return this.codigoPostal;
+    public String getCodigopostal() {
+        return this.codigopostal;
     }
     
-    public void setCodigoPostal(String codigoPostal) {
-        this.codigoPostal = codigoPostal;
+    public void setCodigopostal(String codigopostal) {
+        this.codigopostal = codigopostal;
     }
     public String getTelefono() {
         return this.telefono;
