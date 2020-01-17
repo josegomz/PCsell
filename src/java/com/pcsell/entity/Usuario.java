@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 14/01/2020 01:47:30 PM by Hibernate Tools 4.3.1
+// Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,29 +9,29 @@ import java.util.Set;
  */
 public class Usuario implements java.io.Serializable {
 
-    private long id;
-    private String nombre;
-    private String apellidos;
-    private String coreoElectronico;
-    private String contrasenia;
-    private Set ventas = new HashSet(0);
+     private long id;
+     private String nombre;
+     private String apellidos;
+     private String correoelectronico;
+     private String contrasenia;
+     private Set ventas = new HashSet(0);
 
     public Usuario() {
     }
 
-    public Usuario(long id, String coreoElectronico, String contrasenia) {
+	
+    public Usuario(long id, String correoelectronico, String contrasenia) {
         this.id = id;
-        this.coreoElectronico = coreoElectronico;
+        this.correoelectronico = correoelectronico;
         this.contrasenia = contrasenia;
     }
-
-    public Usuario(long id, String nombre, String apellidos, String coreoElectronico, String contrasenia, Set ventas) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.coreoElectronico = coreoElectronico;
-        this.contrasenia = contrasenia;
-        this.ventas = ventas;
+    public Usuario(long id, String nombre, String apellidos, String correoelectronico, String contrasenia, Set ventas) {
+       this.id = id;
+       this.nombre = nombre;
+       this.apellidos = apellidos;
+       this.correoelectronico = correoelectronico;
+       this.contrasenia = contrasenia;
+       this.ventas = ventas;
     }
 
     public long getId() {
@@ -57,13 +57,12 @@ public class Usuario implements java.io.Serializable {
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
-
-    public String getCoreoElectronico() {
-        return this.coreoElectronico;
+    public String getCorreoelectronico() {
+        return this.correoelectronico;
     }
-
-    public void setCoreoElectronico(String coreoElectronico) {
-        this.coreoElectronico = coreoElectronico;
+    
+    public void setCorreoelectronico(String correoelectronico) {
+        this.correoelectronico = correoelectronico;
     }
 
     public String getContrasenia() {

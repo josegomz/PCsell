@@ -1,4 +1,7 @@
-<!-- Generated 14/01/2020 01:47:31 PM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.pcsell.entity.Usuario" table="usuario" schema="public" optimistic-lock="version">
         <id name="id" type="long">
@@ -11,15 +14,15 @@
         <property name="apellidos" type="string">
             <column name="apellidos" />
         </property>
-        <property name="coreoElectronico" type="string">
-            <column name="coreo_electronico" not-null="true" />
+        <property name="correoelectronico" type="string">
+            <column name="correoelectronico" not-null="true" />
         </property>
         <property name="contrasenia" type="string">
             <column name="contrasenia" not-null="true" />
         </property>
         <set name="ventas" table="venta" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="usuario" not-null="true" />
+                <column name="idusuario" not-null="true" />
             </key>
             <one-to-many class="com.pcsell.entity.Venta" />
         </set>

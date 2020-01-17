@@ -28,6 +28,9 @@ public class UsuarioModel implements IUsuarioModel{
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             lista = (ArrayList<Usuario>) session.createQuery("FROM Usuario").list();
+            for (Usuario u : lista) {
+                System.out.println("Nombre: " + u.getNombre());
+            }
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
@@ -54,12 +57,12 @@ public class UsuarioModel implements IUsuarioModel{
     @Override
     public void crearRegistro(Usuario usuario) {
         try {
-             System.out.println("-ZZZZZZ---------------------------Nombre: " + usuario.getCoreoElectronico());
+             System.out.println("-ZZZZZZ---------------------------Nombre: " + usuario.getCorreoelectronico());
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
             
-            System.out.println("----------------------------Nombre: " + usuario.getCoreoElectronico());
+            System.out.println("----------------------------Nombre: " + usuario.getCorreoelectronico());
             session.save(usuario);
             session.getTransaction().commit();
             session.close();
@@ -99,6 +102,11 @@ public class UsuarioModel implements IUsuarioModel{
         }
     }
     
+    public static void main(String[] args) {
+        IUsuarioModel iUsuarioModel = new UsuarioModel();
+        iUsuarioModel.obtenerRegistros();
+    }
+    
     public boolean obtenerUsuarioPorCorreoYcontrasenia(String username, String password) {
         boolean c = false;
         try {
@@ -117,7 +125,7 @@ public class UsuarioModel implements IUsuarioModel{
             return false;
         } catch (HibernateException e) {
             System.out.println(e.getMessage());
+            return c;
         }
-        return c;
     }
 }

@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Interfaz de la entidad Usuario
  */
 package com.pcsell.service;
 
@@ -10,9 +8,10 @@ import java.util.List;
 
 /**
  *
- * @author Uriel
+ * @author 706
  */
 public interface IUsuarioService {
+
     public List<Usuario> obtenerRegistros();
 
     public Usuario obtenerRegistro(Long id);
@@ -23,6 +22,5 @@ public interface IUsuarioService {
 
     public void eliminarRegistro(Usuario usuario);
     
-     public boolean obtenerUsuarioPorCorreoYcontrasenia(String username, String password);
-    
+    public boolean obtenerUsuarioPorCorreoYcontrasenia(String username, String password);
 }

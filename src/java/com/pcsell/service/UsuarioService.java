@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
 package com.pcsell.service;
 
@@ -9,15 +7,19 @@ import com.pcsell.entity.Usuario;
 import com.pcsell.model.IUsuarioModel;
 import com.pcsell.model.UsuarioModel;
 import java.util.List;
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 
 /**
  *
- * @author Uriel
+ * @author 706
  */
+@ManagedBean(name="usuarioService")
+@ApplicationScoped
 public class UsuarioService implements IUsuarioService{
+
     IUsuarioModel iUsuarioModel = new UsuarioModel();
     
-
     @Override
     public List<Usuario> obtenerRegistros() {
         return iUsuarioModel.obtenerRegistros();
@@ -42,7 +44,6 @@ public class UsuarioService implements IUsuarioService{
     public void eliminarRegistro(Usuario usuario) {
         iUsuarioModel.eliminarRegistro(usuario);
     }
-    
     public boolean obtenerUsuarioPorCorreoYcontrasenia(String username, String password) {
         return iUsuarioModel.obtenerUsuarioPorCorreoYcontrasenia(username, password);
     }

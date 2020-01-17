@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 14/01/2020 01:47:30 PM by Hibernate Tools 4.3.1
+// Generated 17/01/2020 02:39:01 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -14,11 +14,11 @@ public class Procesador  implements java.io.Serializable {
 
      private long id;
      private Imagen imagen;
-     private MarcaProcesador marcaProcesador;
+     private Marcaprocesador marcaprocesador;
      private String modelo;
      private int nucleos;
-     private Integer hilosDeProcesamiento;
-     private BigDecimal frecuenciaBase;
+     private Integer hilosdeprocesamiento;
+     private BigDecimal frecuenciabase;
      private BigDecimal tdp;
      private BigDecimal precio;
      private Integer cantidades;
@@ -29,22 +29,22 @@ public class Procesador  implements java.io.Serializable {
     }
 
 	
-    public Procesador(long id, Imagen imagen, MarcaProcesador marcaProcesador, String modelo, int nucleos, BigDecimal precio) {
+    public Procesador(long id, Imagen imagen, Marcaprocesador marcaprocesador, String modelo, int nucleos, BigDecimal precio) {
         this.id = id;
         this.imagen = imagen;
-        this.marcaProcesador = marcaProcesador;
+        this.marcaprocesador = marcaprocesador;
         this.modelo = modelo;
         this.nucleos = nucleos;
         this.precio = precio;
     }
-    public Procesador(long id, Imagen imagen, MarcaProcesador marcaProcesador, String modelo, int nucleos, Integer hilosDeProcesamiento, BigDecimal frecuenciaBase, BigDecimal tdp, BigDecimal precio, Integer cantidades, String descripcion, Set computadoras) {
+    public Procesador(long id, Imagen imagen, Marcaprocesador marcaprocesador, String modelo, int nucleos, Integer hilosdeprocesamiento, BigDecimal frecuenciabase, BigDecimal tdp, BigDecimal precio, Integer cantidades, String descripcion, Set computadoras) {
        this.id = id;
        this.imagen = imagen;
-       this.marcaProcesador = marcaProcesador;
+       this.marcaprocesador = marcaprocesador;
        this.modelo = modelo;
        this.nucleos = nucleos;
-       this.hilosDeProcesamiento = hilosDeProcesamiento;
-       this.frecuenciaBase = frecuenciaBase;
+       this.hilosdeprocesamiento = hilosdeprocesamiento;
+       this.frecuenciabase = frecuenciabase;
        this.tdp = tdp;
        this.precio = precio;
        this.cantidades = cantidades;
@@ -66,12 +66,12 @@ public class Procesador  implements java.io.Serializable {
     public void setImagen(Imagen imagen) {
         this.imagen = imagen;
     }
-    public MarcaProcesador getMarcaProcesador() {
-        return this.marcaProcesador;
+    public Marcaprocesador getMarcaprocesador() {
+        return this.marcaprocesador;
     }
     
-    public void setMarcaProcesador(MarcaProcesador marcaProcesador) {
-        this.marcaProcesador = marcaProcesador;
+    public void setMarcaprocesador(Marcaprocesador marcaprocesador) {
+        this.marcaprocesador = marcaprocesador;
     }
     public String getModelo() {
         return this.modelo;
@@ -87,19 +87,19 @@ public class Procesador  implements java.io.Serializable {
     public void setNucleos(int nucleos) {
         this.nucleos = nucleos;
     }
-    public Integer getHilosDeProcesamiento() {
-        return this.hilosDeProcesamiento;
+    public Integer getHilosdeprocesamiento() {
+        return this.hilosdeprocesamiento;
     }
     
-    public void setHilosDeProcesamiento(Integer hilosDeProcesamiento) {
-        this.hilosDeProcesamiento = hilosDeProcesamiento;
+    public void setHilosdeprocesamiento(Integer hilosdeprocesamiento) {
+        this.hilosdeprocesamiento = hilosdeprocesamiento;
     }
-    public BigDecimal getFrecuenciaBase() {
-        return this.frecuenciaBase;
+    public BigDecimal getFrecuenciabase() {
+        return this.frecuenciabase;
     }
     
-    public void setFrecuenciaBase(BigDecimal frecuenciaBase) {
-        this.frecuenciaBase = frecuenciaBase;
+    public void setFrecuenciabase(BigDecimal frecuenciabase) {
+        this.frecuenciabase = frecuenciabase;
     }
     public BigDecimal getTdp() {
         return this.tdp;
