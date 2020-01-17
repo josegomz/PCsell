@@ -3,7 +3,7 @@
  */
 package com.pcsell.model;
 
-import com.pcsell.entity.Gabinete;
+import com.pcsell.entity.Computadora;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
@@ -13,20 +13,20 @@ import org.hibernate.cfg.Configuration;
 
 /**
  *
- * @author 706
+ * @author labdessw21
  */
-public class GabineteModel implements IGabineteModel {
-
+public class ComputadoraModel implements IComputadoraModel{
+    
     private SessionFactory sessionFactory;
     private Session session;
 
     @Override
-    public List<Gabinete> obtenerRegistros() {
-        List<Gabinete> lista = null;
+    public List<Computadora> obtenerRegistros() {
+        List<Computadora> lista = null;
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            lista = (ArrayList<Gabinete>) session.createQuery("FROM Gabinete").list();
+            lista = (ArrayList<Computadora>) session.createQuery("FROM Computadora").list();
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
@@ -36,27 +36,27 @@ public class GabineteModel implements IGabineteModel {
     }
 
     @Override
-    public Gabinete obtenerRegistro(Long id) {
-        Gabinete gabinete = null;
+    public Computadora obtenerRegistro(Long id) {
+        Computadora computadora = null;
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            gabinete = (Gabinete) session.get(Gabinete.class, id);
+            computadora = (Computadora) session.get(Computadora.class, id);
             session.close();
             sessionFactory.close();
         } catch (HibernateException e) {
             System.out.println(e.getMessage());
         }
-        return gabinete;
+        return computadora;
     }
 
     @Override
-    public void crearRegistro(Gabinete gabinete) {
+    public void crearRegistro(Computadora computadora) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.save(gabinete);
+            session.save(computadora);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -66,12 +66,12 @@ public class GabineteModel implements IGabineteModel {
     }
 
     @Override
-    public void actualizarRegistro(Gabinete gabinete) {
+    public void actualizarRegistro(Computadora computadora) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.update(gabinete);
+            session.update(computadora);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -81,12 +81,12 @@ public class GabineteModel implements IGabineteModel {
     }
 
     @Override
-    public void eliminarRegistro(Gabinete gabinete) {
+    public void eliminarRegistro(Computadora computadora) {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.delete(gabinete);
+            session.delete(computadora);
             session.getTransaction().commit();
             session.close();
             sessionFactory.close();
@@ -94,5 +94,5 @@ public class GabineteModel implements IGabineteModel {
             System.out.println(e.getMessage());
         }
     }
-
+    
 }

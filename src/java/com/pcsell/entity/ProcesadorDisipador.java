@@ -1,5 +1,5 @@
 package com.pcsell.entity;
-// Generated 14/01/2020 01:47:30 PM by Hibernate Tools 4.3.1
+// Generated 16/01/2020 08:44:30 AM by Hibernate Tools 4.3.1
 
 
 
@@ -9,24 +9,24 @@ package com.pcsell.entity;
 public class ProcesadorDisipador  implements java.io.Serializable {
 
 
-     private ProcesadorDisipadorId id;
+     private long id;
      private DisipadorCalor disipadorCalor;
      private MarcaProcesador marcaProcesador;
 
     public ProcesadorDisipador() {
     }
 
-    public ProcesadorDisipador(ProcesadorDisipadorId id, DisipadorCalor disipadorCalor, MarcaProcesador marcaProcesador) {
+    public ProcesadorDisipador(long id, DisipadorCalor disipadorCalor, MarcaProcesador marcaProcesador) {
        this.id = id;
        this.disipadorCalor = disipadorCalor;
        this.marcaProcesador = marcaProcesador;
     }
    
-    public ProcesadorDisipadorId getId() {
+    public long getId() {
         return this.id;
     }
     
-    public void setId(ProcesadorDisipadorId id) {
+    public void setId(long id) {
         this.id = id;
     }
     public DisipadorCalor getDisipadorCalor() {
