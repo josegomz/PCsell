@@ -5,10 +5,31 @@
  */
 package com.pcsell.controller;
 
+import com.opensymphony.xwork2.ActionSupport;
+import com.pcsell.entity.Procesador;
+import com.pcsell.service.IProcesadorSevice;
+import com.pcsell.service.ProcesadorService;
+import java.util.List;
+
 /**
  *
  * @author macbookair
  */
-public class ProcesadorController {
+public class ProcesadorController extends ActionSupport{
     
+    IProcesadorSevice iProcesadorSevice;
+    private Procesador procesador;
+    private List<Procesador> listaRegistros;
+    
+    public String obtenerRegistro() throws Exception{
+        return SUCCESS;
+    }
+    
+    public String obtenerRegistro(){
+        iProcesadorSevice = new ProcesadorService();
+        try {
+            
+        } catch (Exception e) {
+        }
+    }
 }
