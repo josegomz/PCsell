@@ -1,7 +1,7 @@
 /*
  * 
  */
-package com.pcsell.model;
+package com.pcsell.service;
 
 import com.pcsell.entity.ProcesadorDisipador;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author 
  */
-public interface IProcesadorDisipadorModel {
+public interface IProcesadorDisipadorService {
     public List<ProcesadorDisipador> obtenerRegistros();
 
     public ProcesadorDisipador obtenerRegistro(Long id);
