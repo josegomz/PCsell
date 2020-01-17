@@ -9,13 +9,6 @@ import java.util.Set;
  */
 public class Usuario implements java.io.Serializable {
 
-    private long id;
-    private String nombre;
-    private String apellidos;
-    private String coreoElectronico;
-    private String contrasenia;
-    private Set ventas = new HashSet(0);
-
      private long id;
      private String nombre;
      private String apellidos;

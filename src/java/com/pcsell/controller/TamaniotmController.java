@@ -7,8 +7,8 @@ package com.pcsell.controller;
 
 /**
  *
- * @author labtw13
+ * @author macbookair
  */
-public class controller {
+public class TamaniotmController {
     
 }
