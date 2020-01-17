@@ -1,0 +1,14 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: labtw08 -->
+ 
+<struts>
+    <package name="login" namespace="/pages/login"  extends="struts-default">
+        <action name="login" class="com.pcsell.controller.LoginActionController" method="validarUsuario">
+            <result name="SUCCESS">pages/computadora/armarPc.jsp</result>
+            <result name="ERROR">pages/login/index.jsp</result>
+        </action>
+    </package>
+</struts>
