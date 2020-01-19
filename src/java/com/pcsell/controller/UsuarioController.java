@@ -42,6 +42,9 @@ public class UsuarioController {
         this.usuario = usuario;
     }
     
+    public String actualizar()throws Exception{
+        return SUCCESS;
+    }
 
     public String crearRegistro()throws Exception{
         try {
