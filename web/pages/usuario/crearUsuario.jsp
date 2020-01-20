@@ -47,6 +47,9 @@
                                 <s:a href="">
                                     <span class="dropdown-item">Perfil</span>
                                 </s:a>
+                                <s:a href="crearUsuario.jsp">
+                                    <span class="dropdown-item">Crear Usuario</span>
+                                </s:a>
                                 <s:a href="dsj">
                                     <span class="dropdown-item">Salir</span>
                                 </s:a>
