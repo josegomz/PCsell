@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PCSELL</title>
-        <link href="../../resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!--        <link rel="stylesheet" href="resources/css/bootstrap.min.css">-->
         <script src="../../resources/js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="../../resources/js/bootstrap.min.js" type="text/javascript"></script>
