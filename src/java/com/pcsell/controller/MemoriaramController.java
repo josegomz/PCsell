@@ -95,14 +95,6 @@ public class MemoriaramController extends ActionSupport{
     
     /*GETTERS Y SETTERS*/
 
-    public IMemoriaramService getiMemoriaramService() {
-        return iMemoriaramService;
-    }
-
-    public void setiMemoriaramService(IMemoriaramService iMemoriaramService) {
-        this.iMemoriaramService = iMemoriaramService;
-    }
-
     public Memoriaram getMemoriaram() {
         return memoriaram;
     }
@@ -110,5 +102,15 @@ public class MemoriaramController extends ActionSupport{
     public void setMemoriaram(Memoriaram memoriaram) {
         this.memoriaram = memoriaram;
     }
+
+    public List<Memoriaram> getListaRegistros() {
+        return listaRegistros;
+    }
+
+    public void setListaRegistros(List<Memoriaram> listaRegistros) {
+        this.listaRegistros = listaRegistros;
+    }
+
+
     
 }
