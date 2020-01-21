@@ -5,9 +5,9 @@
 <!-- Author: labtw08 -->
  
 <struts>
-    <package name="login" namespace="/pages/login"  extends="struts-default">
+    <package name="login" namespace="/"  extends="struts-default">
         <action name="login" class="com.pcsell.controller.LoginActionController" method="validarUsuario">
-            <result name="SUCCESS">pages/computadora/armarPc.jsp</result>
+            <result name="SUCCESS">pages/usuario/mostrarUsuarios.jsp</result>
             <result name="ERROR">pages/login/index.jsp</result>
         </action>
     </package>
