@@ -72,4 +72,21 @@ public class ProcesadordisipadorController extends ActionSupport{
     }
     
     /*GETTERS Y SETTERS*/
+
+    public Procesadordisipador getProcesadordisipador() {
+        return procesadordisipador;
+    }
+
+    public void setProcesadordisipador(Procesadordisipador procesadordisipador) {
+        this.procesadordisipador = procesadordisipador;
+    }
+
+    public List<Procesadordisipador> getListaRegistros() {
+        return listaRegistros;
+    }
+
+    public void setListaRegistros(List<Procesadordisipador> listaRegistros) {
+        this.listaRegistros = listaRegistros;
+    }
+    
 }
