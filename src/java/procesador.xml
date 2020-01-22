@@ -1,9 +1,33 @@
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
-
 <!-- Author: labtw13 -->
- 
 <struts>
     <!-- Add your configuration elements here -->
+    <package name="procesador" namespace="/pages/procesador"  extends="struts-default">
+        <action name="actionInsertProcesador" 
+                class="com.pcsell.controller.ProcesadorController"
+                method="crearRegistro">
+            <result name="success">/pages/procesador/mostrarProcesadores.jsp</result>
+            <result name="error">/pages/procesador/errorProcesador.jsp</result>
+        </action>
+        <action name="actionDeleteProcesador" 
+                class="com.pcsell.controller.ProcesadorController"
+                method="eliminarRegistro">
+            <result name="success">/pages/procesador/mostrarProcesadores.jsp</result>
+            <result name="error">/pages/procesador/errorProcesador.jsp</result>
+        </action>
+        <action name="actionUpdateProcesador" 
+                class="com.pcsell.controller.ProcesadorController"
+                method="actualizarRegistro">
+            <result name="success">/pages/procesador/mostrarProcesadores.jsp</result>
+            <result name="error">/pages/procesador/errorProcesador.jsp</result>
+        </action>
+        <action name="actionMostrarProcesadores"
+                class="com.pcsell.controller.ProcesadorController"
+                method="obtenerRegistros">
+            <result name="success">/pages/procesador/mostrarProcesadores.jsp</result>
+            <result name="error">/pages/procesador/errorProcesador.jsp</result>
+        </action>
+    </package>
 </struts>

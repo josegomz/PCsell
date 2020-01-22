@@ -6,4 +6,30 @@
  
 <struts>
     <!-- Add your configuration elements here -->
+    <package name="fuentepoder" namespace="/pages/fuentepoder"  extends="struts-default">
+        <action name="actionInsertFuentepoder" 
+                class="com.pcsell.controller.FuentepoderController"
+                method="crearRegistro">
+            <result name="success">/pages/fuentepoder/mostrarFuentes.jsp</result>
+            <result name="error">/pages/fuentepoder/errorFuentepoder.jsp</result>
+        </action>
+        <action name="actionDeleteFuentepoder" 
+                class="com.pcsell.controller.FuentepoderController"
+                method="eliminarRegistro">
+            <result name="success">/pages/fuentepoder/mostrarFuentes.jsp</result>
+            <result name="error">/pages/fuentepoder/errorFuentepoder.jsp</result>
+        </action>
+        <action name="actionUpdateFuentepoder" 
+                class="com.pcsell.controller.FuentepoderController"
+                method="actualizarRegistro">
+            <result name="success">/pages/fuentepoder/mostrarFuentes.jsp</result>
+            <result name="error">/pages/fuentepoder/errorFuentepoder.jsp</result>
+        </action>
+        <action name="actionMostrarFuentes"
+                class="com.pcsell.controller.FuentepoderController"
+                method="obtenerRegistros">
+            <result name="success">/pages/fuentepoder/mostrarFuentes.jsp</result>
+            <result name="error">/pages/fuentepoder/errorFuentepoder.jsp</result>
+        </action>
+    </package>
 </struts>

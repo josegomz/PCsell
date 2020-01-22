@@ -6,4 +6,30 @@
  
 <struts>
     <!-- Add your configuration elements here -->
+    <package name="tarjetamadre" namespace="/pages/tarjetamadre"  extends="struts-default">
+        <action name="actionInsertTarjetamadre" 
+                class="com.pcsell.controller.TarjetamadreController"
+                method="crearRegistro">
+            <result name="success">/pages/tarjetamadre/mostrarTarjetas.jsp</result>
+            <result name="error">/pages/tarjetamadre/errorTarjetamadre.jsp</result>
+        </action>
+        <action name="actionDeleteTarjetamadre" 
+                class="com.pcsell.controller.TarjetamadreController"
+                method="eliminarRegistro">
+            <result name="success">/pages/tarjetamadre/mostrarTarjetas.jsp</result>
+            <result name="error">/pages/tarjetamadre/errorTarjetamadre.jsp</result>
+        </action>
+        <action name="actionUpdateTarjetamadre" 
+                class="com.pcsell.controller.TarjetamadreController"
+                method="actualizarRegistro">
+            <result name="success">/pages/tarjetamadre/mostrarTarjetas.jsp</result>
+            <result name="error">/pages/tarjetamadre/errorTarjetamadre.jsp</result>
+        </action>
+        <action name="actionMostrarTarjetasmadre"
+                class="com.pcsell.controller.TarjetamadreController"
+                method="obtenerRegistros">
+            <result name="success">/pages/tarjetamadre/mostrarTarjetas.jsp</result>
+            <result name="error">/pages/tarjetamadre/errorTarjetamadre.jsp</result>+
+        </action>
+    </package>
 </struts>

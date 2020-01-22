@@ -6,7 +6,7 @@
  
 <struts>
     <!-- Add your configuration elements here -->
-    <package name="venta" namespace="/pages/marcaprocesador"  extends="struts-default">
+    <package name="marcaprocesador" namespace="/pages/marcaprocesador"  extends="struts-default">
         <action name="actionInsertMarcaprocesador" 
                 class="com.pcsell.controller.MarcaprocesadorController"
                 method="crearRegistro">
