@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PCSELL</title>
-        <link href="../../resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!--        <link rel="stylesheet" href="resources/css/bootstrap.min.css">-->
         <script src="../../resources/js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="../../resources/js/bootstrap.min.js" type="text/javascript"></script>
@@ -47,6 +47,9 @@
                                 <s:a href="">
                                     <span class="dropdown-item">Perfil</span>
                                 </s:a>
+                                <s:a href="crearUsuario.jsp">
+                                    <span class="dropdown-item">Crear Usuario</span>
+                                </s:a>
                                 <s:a href="dsj">
                                     <span class="dropdown-item">Salir</span>
                                 </s:a>
@@ -64,7 +67,7 @@
             <s:form action="actionInsertUsuario" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <s:textfield name="usuario.coreoElectronico" type="email" id="inputEmail4" cssClass="form-control" placeholder="Email"></s:textfield>
+                        <s:textfield name="usuario.correoelectronico" type="email" id="inputEmail4" cssClass="form-control" placeholder="Email"></s:textfield>
                         </div>
                         <div class="form-group col-md-6">
                         <s:textfield name="usuario.contrasenia" type="password" size="100px" id="inputPassword4" cssClass="form-control" placeholder="Password"></s:textfield>

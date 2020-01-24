@@ -57,12 +57,9 @@ public class UsuarioModel implements IUsuarioModel{
     @Override
     public void crearRegistro(Usuario usuario) {
         try {
-             System.out.println("-ZZZZZZ---------------------------Nombre: " + usuario.getCorreoelectronico());
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
-            
-            System.out.println("----------------------------Nombre: " + usuario.getCorreoelectronico());
             session.save(usuario);
             session.getTransaction().commit();
             session.close();
@@ -75,6 +72,7 @@ public class UsuarioModel implements IUsuarioModel{
     @Override
     public void actualizarRegistro(Usuario usuario) {
         try {
+            System.out.println("El usuario a actualizar es: "+ usuario.getNombre());
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
             session.beginTransaction();
@@ -112,7 +110,7 @@ public class UsuarioModel implements IUsuarioModel{
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            String hql = "SELECT nombre FROM Usuario WHERE coreo_electronico =:userName AND contrasenia =:passWord";
+            String hql = "SELECT nombre FROM Usuario WHERE correoelectronico =:userName AND contrasenia =:passWord";
             Query query = session.createQuery(hql);
             query.setParameter("userName", username);
             query.setParameter("passWord", password);

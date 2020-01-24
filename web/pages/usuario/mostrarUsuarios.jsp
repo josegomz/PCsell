@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PCSELL</title>
-        <link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
+        <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <script  type="Text/javascript" src="../../resources/js/jquery-3.3.1.min.js"></script>
         <script  type="Text/javascript" src="../../resources/js/bootstrap.min.js"></script>
     </head>
@@ -44,6 +44,9 @@
                                 <s:a href="dsj">
                                     <span class="dropdown-item">Perfil</span>
                                 </s:a>
+                                <s:a href="crearUsuario.jsp">
+                                    <span class="dropdown-item">Crear Usuario</span>
+                                </s:a>
                                 <s:a href="dsj">
                                     <span class="dropdown-item">Salir</span>
                                 </s:a>
@@ -67,6 +70,7 @@
                                 <th>Nombre</th>
                                 <th>Apellidos</th>
                                 <th>Correo Electrónico</th>
+                                <th>Contraseña</th>
                                 <th>Opciones</th>
                             </tr>
                         </thead>
@@ -76,20 +80,20 @@
                                     <td><s:property value="id"></s:property></td>
                                     <td><s:property value="nombre"></s:property></td>
                                     <td><s:property value="apellidos"></s:property></td>
-                                    <td><s:property value="coreoElectronico"></s:property></td>
+                                    <td><s:property value="correoelectronico"></s:property></td>
                                     <td><s:property value="contrasenia"></s:property></td>
                                     <td>
                                     <s:a action="actionActualizarUsuario">
-                                        <s:param name="framework.id" value="id"></s:param>
-                                        <s:param name="framework.nombre" value="nombre"></s:param>
-                                        <s:param name="framework.apellidos" value="apellidos"></s:param>
-                                        <s:param name="framework.coreoElectronico" value="coreoElectronico"></s:param>
-                                        <s:param name="framework.contrasenia" value="contrasenia"></s:param>
-                                        <span class="btn bg-info">Editar</span>
+                                        <s:param name="usuario.id" value="id"></s:param>
+                                        <s:param name="usuario.nombre" value="nombre"></s:param>
+                                        <s:param name="usuario.apellidos" value="apellidos"></s:param>
+                                        <s:param name="usuario.correoelectronico" value="correoelectronico"></s:param>
+                                        <s:param name="usuario.contrasenia" value="contrasenia"></s:param>
+                                        <span class="btn bg-warning text-white">Editar</span>
                                     </s:a>
                                     <s:a action="actionDeleteUsuario">
                                         <s:param name="usuario.id" value="id"></s:param>
-                                        <span class="btn bg-danger">Eliminar</span>
+                                        <span class="btn bg-danger text-white">Eliminar</span>
                                     </s:a>
                                     </td>
                                 </tr>

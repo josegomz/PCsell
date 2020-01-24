@@ -2,11 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< Updated upstream
+        <group/>
+=======
         <group>
-            <file>file:/home/labtw13/NetBeansProjects/PCsell/src/java/com/pcsell/entity/Usuario.java</file>
-            <file>file:/home/labtw13/NetBeansProjects/PCsell/src/java/resources_sql/PCsell.sql</file>
-            <file>file:/home/labtw13/NetBeansProjects/PCsell/src/java/hibernate.cfg.xml</file>
-            <file>file:/home/labtw13/NetBeansProjects/PCsell/src/java/com/pcsell/model/UsuarioModel.java</file>
+            <file>file:/home/labdessw21/NetBeansProjects/PCsell/src/java/com/pcsell/model/ComputadoraModel.java</file>
+            <file>file:/home/labdessw21/NetBeansProjects/PCsell/src/java/com/pcsell/model/ProcesadorDisipadorModel.java</file>
+            <file>file:/home/labdessw21/NetBeansProjects/PCsell/src/java/com/pcsell/model/FuentePoderModel.java</file>
+            <file>file:/home/labdessw21/NetBeansProjects/PCsell/src/java/com/pcsell/model/IFuentePoderModel.java</file>
+            <file>file:/home/labdessw21/NetBeansProjects/PCsell/src/java/com/pcsell/model/IDiscoDuroModel.java</file>
+            <file>file:/home/labdessw21/NetBeansProjects/PCsell/src/java/com/pcsell/model/GabineteModel.java</file>
+            <file>file:/home/labdessw21/NetBeansProjects/PCsell/src/java/com/pcsell/model/IProcesadorDisipadorModel.java</file>
+            <file>file:/home/labdessw21/NetBeansProjects/PCsell/src/java/com/pcsell/model/MemoriaRamModel.java</file>
         </group>
+>>>>>>> Stashed changes
     </open-files>
 </project-private>
