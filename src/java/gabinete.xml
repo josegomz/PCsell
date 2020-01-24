@@ -1,0 +1,35 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: labtw13 -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    <package name="gabinete" namespace="/pages/gabinete"  extends="struts-default">
+        <action name="actionInsertGabinete" 
+                class="com.pcsell.controller.GabineteController"
+                method="crearRegistro">
+            <result name="success">/pages/gabinete/mostrarGabinetes.jsp</result>
+            <result name="error">/pages/gabinete/errorGabinete.jsp</result>
+        </action>
+        <action name="actionDeleteGabinete" 
+                class="com.pcsell.controller.GabineteController"
+                method="eliminarRegistro">
+            <result name="success">/pages/gabinete/mostrarGabinetes.jsp</result>
+            <result name="error">/pages/gabinete/errorGabinete.jsp</result>
+        </action>
+        <action name="actionUpdateGabinete" 
+                class="com.pcsell.controller.GabineteController"
+                method="actualizarRegistro">
+            <result name="success">/pages/gabinete/mostrarGabinetes.jsp</result>
+            <result name="error">/pages/gabinete/errorGabinete.jsp</result>
+        </action>
+        <action name="actionMostrarGabinetes"
+                class="com.pcsell.controller.GabineteController"
+                method="obtenerRegistros">
+            <result name="success">/pages/gabinete/mostrarGabinetes.jsp</result>
+            <result name="error">/pages/gabinete/errorGabinete.jsp</result>
+        </action>
+    </package>
+</struts>

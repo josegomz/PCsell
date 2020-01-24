@@ -5,4 +5,16 @@
 <struts>
         <include file="usuario.xml"></include>
         <include file="login.xml"></include>
+        <include file="computadora.xml"></include>
+        <include file="discoduro.xml"></include>
+        <include file="disipador.xml"></include>
+        <include file="fuentepoder.xml"></include>
+        <include file="gabinete.xml"></include>
+        <include file="marcaprocesador.xml"></include>
+        <include file="memoriaram.xml"></include>
+        <include file="procesador.xml"></include>
+        <include file="tarjetamadre.xml"></include>
+        <include file="tarjetavideo.xml"></include>
+        <include file="venta.xml"></include>
+
 </struts>
