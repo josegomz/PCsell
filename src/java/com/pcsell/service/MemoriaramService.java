@@ -9,15 +9,12 @@ import com.pcsell.entity.Memoriaram;
 import com.pcsell.model.IMemoriaramModel;
 import com.pcsell.model.MemoriaramModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author labtw13
  */
-@ManagedBean(name="memoriaramService")
-@ApplicationScoped
+
 public class MemoriaramService implements IMemoriaramService{
     
     private final IMemoriaramModel iMemoriaRamModel = new MemoriaramModel();

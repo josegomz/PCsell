@@ -6,6 +6,8 @@
 package com.pcsell.service;
 
 import com.pcsell.entity.Procesador;
+import com.pcsell.model.IProcesadorModel;
+import com.pcsell.model.ProcesadorModel;
 import java.util.List;
 
 /**
@@ -14,29 +16,31 @@ import java.util.List;
  */
 public class ProcesadorService implements IProcesadorSevice{
 
+    private final IProcesadorModel iProcesadorModel = new ProcesadorModel();
+    
     @Override
     public List<Procesador> obtenerRegistros() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return iProcesadorModel.obtenerRegistros();
     }
 
     @Override
     public Procesador obtenerRegistro(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return iProcesadorModel.obtenerRegistro(id);
     }
 
     @Override
     public void crearRegistro(Procesador procesador) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        iProcesadorModel.crearRegistro(procesador);
     }
 
     @Override
     public void actualizarRegistro(Procesador procesador) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        iProcesadorModel.actualizarRegistro(procesador);
     }
 
     @Override
     public void eliminarRegistro(Procesador procesador) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        iProcesadorModel.eliminarRegistro(procesador);
     }
     
 }

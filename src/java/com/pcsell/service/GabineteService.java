@@ -9,15 +9,11 @@ import com.pcsell.entity.Gabinete;
 import com.pcsell.model.GabineteModel;
 import com.pcsell.model.IGabineteModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author labtw13
  */
-@ManagedBean(name="gabineteService")
-@ApplicationScoped
 public class GabineteService implements IGabineteService{
     
     private final IGabineteModel iGabineteModel = new GabineteModel();

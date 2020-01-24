@@ -9,15 +9,11 @@ import com.pcsell.entity.Marcaprocesador;
 import com.pcsell.model.IMarcaprocesadorModel;
 import com.pcsell.model.MarcaprocesadorModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author labtw13
  */
-@ManagedBean(name="marcaprocesadorService")
-@ApplicationScoped
 public class MarcaprocesadorService implements IMarcaprocesadorService{
 
     private final IMarcaprocesadorModel iMarcaProcesadorModel = new MarcaprocesadorModel();

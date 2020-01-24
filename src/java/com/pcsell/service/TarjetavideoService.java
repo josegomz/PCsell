@@ -7,15 +7,11 @@ import com.pcsell.entity.Tarjetavideo;
 import com.pcsell.model.ITarjetavideoModel;
 import com.pcsell.model.TarjetavideoModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author 706
  */
-@ManagedBean(name="tarjetavideoService")
-@ApplicationScoped
 public class TarjetavideoService implements ITarjetavideoService{
     
     private final ITarjetavideoModel iTarjetavideoModel = new TarjetavideoModel();
