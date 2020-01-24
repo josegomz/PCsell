@@ -1,0 +1,51 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: labtw08 -->
+ 
+<struts>
+    <package name="pcsell" namespace="/"  extends="struts-default">
+        
+        <!-- ACCION LOGIN -->
+        <action name="login" class="com.pcsell.controller.LoginActionController" method="validarUsuario">
+            <result name="SUCCESS">pages/usuario/mostrarUsuarios.jsp</result>
+            <result name="ERROR">pages/login/index.jsp</result>
+        </action>
+        
+        <!-- ACCION USUARIO -->
+        <action name="actionInsertUsuario" 
+                class="com.pcsell.controller.UsuarioController"
+                method="crearRegistro">
+            <result name="success">/pages/usuario/mostrarUsuarios.jsp</result>
+            <result name="error">/pages/usuario/errorUsuario.jsp</result>
+        </action>
+        <action name="actionDeleteUsuario"
+                class="com.pcsell.controller.UsuarioController"
+                method="eliminarRegistro">
+            <result name="success">/pages/usuario/mostrarUsuarios.jsp</result>
+            <result name="error">/pages/usuario/errorUsuario.jsp</result>
+        </action>
+        <action name="actionUpdateUsuario"
+                class="com.pcsell.controller.UsuarioController"
+                method="actualizarRegistro">
+            <result name="success">/pages/usuario/mostrarUsuarios.jsp</result>
+            <result name="error">/pages/usuario/errorUsuario.jsp</result>
+        </action>
+        <action name="actionActualizarUsuario"
+            class="com.pcsell.controller.UsuarioController" method="actualizar">
+        <result name="success">/pages/usuario/actualizarUsuario.jsp</result>
+        <result name="error">/pages/usuario/errorUsuario.jsp</result>
+        </action>
+        <action name="actionArmarPc" class="com.pcsell.controller.UsuarioController">
+        <result name="success">/pages/usuario/mostrarUsuario.jsp</result>
+        <result name="error">/pages/usuario/errorUsuario.jsp</result>
+        </action>
+        <action name="actionMostrarUsuarios"
+                class="com.pcsell.controller.UsuarioController"
+                method="obtenerRegistros">
+            <result name="success">/pages/usuario/mostrarUsuarios.jsp</result>
+            <result name="error">/pages/usuario/errorUsuario.jsp</result>
+        </action>
+    </package>
+</struts>

@@ -6,7 +6,7 @@
  
 <struts>
     <!-- Add your configuration elements here -->
-    <package name="venta" namespace="/pages/venta"  extends="struts-default">
+    <package name="venta" namespace="/pages"  extends="struts-default">
         <action name="actionInsertVenta" 
                 class="com.pcsell.controller.VentaController"
                 method="crearRegistro">
