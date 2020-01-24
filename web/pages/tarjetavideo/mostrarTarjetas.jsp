@@ -67,10 +67,14 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Apellidos</th>
-                                <th>Correo Electrónico</th>
-                                <th>Contraseña</th>
+                                <th>Imagen</th>
+                                <th>Modelo</th>
+                                <th>VRAM</th>
+                                <th>RAM</th>
+                                <th>Conexión</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
                                 <th>Opciones</th>
                             </tr>
                         </thead>
@@ -78,21 +82,31 @@
                             <s:iterator value="listaRegistros" var="registros" status="struts">
                                 <tr >
                                     <td><s:property value="id"></s:property></td>
-                                    <td><s:property value="nombre"></s:property></td>
-                                    <td><s:property value="apellidos"></s:property></td>
-                                    <td><s:property value="correoelectronico"></s:property></td>
-                                    <td><s:property value="contrasenia"></s:property></td>
+                                    <td><s:property value="imagen"></s:property></td>
+                                    <td><s:property value="marca"></s:property></td>
+                                    <td><s:property value="modelo"></s:property></td>
+                                    <td><s:property value="vram"></s:property></td>
+                                    <td><s:property value="ram"></s:property></td>
+                                    <td><s:property value="conexion"></s:property></td>
+                                    <td><s:property value="descripcion"></s:property></td>
+                                    <td><s:property value="precio"></s:property></td>
+                                    <td><s:property value="cantidad"></s:property></td>
                                     <td>
-                                    <s:a action="actionActualizarUsuario">
-                                        <s:param name="usuario.id" value="id"></s:param>
-                                        <s:param name="usuario.nombre" value="nombre"></s:param>
-                                        <s:param name="usuario.apellidos" value="apellidos"></s:param>
-                                        <s:param name="usuario.correoelectronico" value="correoelectronico"></s:param>
-                                        <s:param name="usuario.contrasenia" value="contrasenia"></s:param>
+                                    <s:a action="actionActualizarTarjetaVideo">
+                                        <s:param name="tarjetavideo.id" value="id"></s:param>
+                                        <s:param name="tarjetavideo.imagen" value="imagen"></s:param>
+                                        <s:param name="tarjetavideo.marca" value="marca"></s:param>
+                                        <s:param name="tarjetavideo.modelo" value="modelo"></s:param>
+                                        <s:param name="tarjetavideo.vram" value="vram"></s:param>
+                                        <s:param name="tarjetavideo.ram" value="ram"></s:param>
+                                        <s:param name="tarjetavideo.conexion" value="conexion"></s:param>
+                                        <s:param name="tarjetavideo.descripcion" value="descripcion"></s:param>
+                                        <s:param name="tarjetavideo.precio" value="precio"></s:param>
+                                        <s:param name="tarjetavideo.cantidad" value="cantidad"></s:param>
                                         <span class="btn bg-warning text-white">Editar</span>
                                     </s:a>
-                                    <s:a action="actionDeleteUsuario">
-                                        <s:param name="usuario.id" value="id"></s:param>
+                                    <s:a action="actionDeleteTarjetaVideo">
+                                        <s:param name="tarjetavideo.id" value="id"></s:param>
                                         <span class="btn bg-danger text-white">Eliminar</span>
                                     </s:a>
                                     </td>
@@ -102,7 +116,6 @@
                     </table>
                 </div>
             </div>
-
         </div>
     </body>
 </html>
