@@ -9,15 +9,11 @@ import com.pcsell.entity.Discoduro;
 import com.pcsell.model.DiscoduroModel;
 import com.pcsell.model.IDiscoduroModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author labtw13
  */
-@ManagedBean(name="discoduroService")
-@ApplicationScoped
 public class DiscoduroService implements IDiscoduroService{
     
     private final IDiscoduroModel iDiscoDuroModel = new DiscoduroModel();

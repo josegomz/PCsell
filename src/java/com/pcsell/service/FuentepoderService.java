@@ -9,15 +9,11 @@ import com.pcsell.entity.Fuentepoder;
 import com.pcsell.model.FuentepoderModel;
 import com.pcsell.model.IFuentepoderModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author labtw13
  */
-@ManagedBean(name="fuentepoderService")
-@ApplicationScoped
 public class FuentepoderService implements IFuentepoderService{
     
     private final IFuentepoderModel iFuentePoderModel = new FuentepoderModel();

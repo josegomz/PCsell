@@ -9,15 +9,11 @@ import com.pcsell.entity.Imagen;
 import com.pcsell.model.IImagenModel;
 import com.pcsell.model.ImagenModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author labtw13
  */
-@ManagedBean(name="imagenService")
-@ApplicationScoped
 public class ImagenService implements IImagenService{
 
     private final IImagenModel iImagenModel = new ImagenModel();

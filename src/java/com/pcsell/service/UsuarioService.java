@@ -7,15 +7,12 @@ import com.pcsell.entity.Usuario;
 import com.pcsell.model.IUsuarioModel;
 import com.pcsell.model.UsuarioModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author 706
  */
-@ManagedBean(name="usuarioService")
-@ApplicationScoped
+
 public class UsuarioService implements IUsuarioService{
 
     IUsuarioModel iUsuarioModel = new UsuarioModel();

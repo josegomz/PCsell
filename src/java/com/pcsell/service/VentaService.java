@@ -7,15 +7,11 @@ import com.pcsell.entity.Venta;
 import com.pcsell.model.IVentaModel;
 import com.pcsell.model.VentaModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author labtw13
  */
-@ManagedBean(name="ventaService")
-@ApplicationScoped
 public class VentaService implements IVentaService{
     
     private final IVentaModel iVentaModel = new VentaModel();

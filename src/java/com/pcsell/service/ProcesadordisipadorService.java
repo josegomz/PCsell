@@ -9,15 +9,11 @@ import com.pcsell.entity.Procesadordisipador;
 import com.pcsell.model.IProcesadordisipadorModel;
 import com.pcsell.model.ProcesadordisipadorModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author labtw13
  */
-@ManagedBean(name="procesadordisipadorService")
-@ApplicationScoped
 public class ProcesadordisipadorService implements IProcesadordisipadorService{
 
     private final IProcesadordisipadorModel iProcesadorDisipadorModel = new ProcesadordisipadorModel();

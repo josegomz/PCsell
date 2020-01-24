@@ -9,15 +9,11 @@ import com.pcsell.entity.Disipadorcalor;
 import com.pcsell.model.DisipadorcalorModel;
 import com.pcsell.model.IDisipadorcalorModel;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author labtw13
  */
-@ManagedBean(name="disipadorcalorService")
-@ApplicationScoped
 public class DisipadorcalorService implements IDisipadorcalorService{
     
     private final IDisipadorcalorModel iDisipadorCalorModel = new DisipadorcalorModel();
