@@ -47,5 +47,13 @@
             <result name="success">/pages/usuario/mostrarUsuarios.jsp</result>
             <result name="error">/pages/usuario/errorUsuario.jsp</result>
         </action>
+         <!-- ACCION Tarjeta de Video -->
+    <action name="actionMostrarTarjetaVideo"
+        class="com.pcsell.controller.TarjetavideoController"
+        method="obtenerRegistros">
+        <result name="success">/pages/tarjetavideo/mostrarTarjetas.jsp</result>
+        <result name="error">/pages/tarjetavideo/errorTarjetavideo.jsp</result>
+    </action>
     </package>
+    
 </struts>
