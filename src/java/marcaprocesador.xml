@@ -1,0 +1,35 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: labtw13 -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    <package name="marcaprocesador" namespace="/pages/marcaprocesador"  extends="struts-default">
+        <action name="actionInsertMarcaprocesador" 
+                class="com.pcsell.controller.MarcaprocesadorController"
+                method="crearRegistro">
+            <result name="success">/pages/marcaprocesador/mostrarMarcas.jsp</result>
+            <result name="error">/pages/marcaprocesador/errorMarcaprocesador.jsp</result>
+        </action>
+        <action name="actionDeleteMarcaprocesador" 
+                class="com.pcsell.controller.MarcaprocesadorController"
+                method="eliminarRegistro">
+            <result name="success">/pages/marcaprocesador/mostrarMarcas.jsp</result>
+            <result name="error">/pages/marcaprocesador/errorMarcaprocesador.jsp</result>
+        </action>
+        <action name="actionUpdateMarcaprocesador" 
+                class="com.pcsell.controller.MarcaprocesadorController"
+                method="actualizarRegistro">
+            <result name="success">/pages/marcaprocesador/mostrarMarcas.jsp</result>
+            <result name="error">/pages/marcaprocesador/errorMarcaprocesador.jsp</result>
+        </action>
+        <action name="actionMostrarMarcasprocesador"
+                class="com.pcsell.controller.MarcaprocesadorController"
+                method="obtenerRegistros">
+            <result name="success">/pages/marcaprocesador/mostrarMarcas.jsp</result>
+            <result name="error">/pages/marcaprocesador/errorMarcaprocesador.jsp</result>
+        </action>
+    </package>
+</struts>
