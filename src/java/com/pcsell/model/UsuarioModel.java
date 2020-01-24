@@ -110,7 +110,7 @@ public class UsuarioModel implements IUsuarioModel{
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-            String hql = "SELECT nombre FROM Usuario WHERE coreo_electronico =:userName AND contrasenia =:passWord";
+            String hql = "SELECT nombre FROM Usuario WHERE correoelectronico =:userName AND contrasenia =:passWord";
             Query query = session.createQuery(hql);
             query.setParameter("userName", username);
             query.setParameter("passWord", password);

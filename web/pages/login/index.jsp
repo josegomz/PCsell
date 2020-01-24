@@ -5,8 +5,8 @@
         <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="resources/login/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="resources/login/css/cssLogin.css" rel="stylesheet" type="text/css"/>
+        <link href="${pageContext.request.contextPath}/resources/login/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="${pageContext.request.contextPath}/resources/login/css/cssLogin.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="container well" id="containerLogin">
@@ -21,7 +21,7 @@
                 <button type="submit" value="Submit" id="botonLogin" class="btn btn-primary">INGRESAR</button>
             </form>
             <div class="col-12 forgot">
-                <br><a href="#">Crear cuenta</a>
+                <br><a href="${pageContext.request.contextPath}/pages/usuario/crearUsuario.jsp">Crear cuenta</a>
             </div>
 
         </div>
